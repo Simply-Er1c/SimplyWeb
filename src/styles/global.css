@@ -1,19 +1,16 @@
 @import "tailwindcss";
 
-:root {
-    --color-primary: #1d5bde;
-    --color-secondary: #f8751d;
-    --color-background-light: #f0f2f5;
-    --color-background-dark: #101010;
-    --color-text-dark: #101010;
-    --color-text-light: #f0f2f5;
+@theme { 
+       --color-coolblue: #1d5bde;
+  --color-sweetevil: #f81d22;
+  --color-orangejuice: #f8751d;
+  --color-neoncyn: #3abff8;
+  --color-futureviolet: #7a1dde;
+  --color-snowwhite: #f0f2f5;
+  --color-justdark: #101010;
 }
-
 @layer components {
-    a {
-        @apply px-4 py-2 bg-[var(--color-primary)] hover:scale-110 text-white rounded-sm duration-100
-       font-medium flex items-center justify-center hover:shadow-lg;
-    }
+   
 
     .grid-background {
         background:
