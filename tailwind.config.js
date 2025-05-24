@@ -5,15 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        coolblue: "#1d5bde",      
-        sweetevil: "#f81d22",     
-        orangejuice: "#f8751d",   
-        neoncyn: "#3abff8",       
-        futureviolet: "#7a1dde",  
-        snowwhite: "#f0f2f5",     
-        justdark: "#101010",      
+       fontFamily: {
+        inter: ['Inter', 'sans-serif'],
       },
+     
     },
   },
 };
