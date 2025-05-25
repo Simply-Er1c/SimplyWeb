@@ -1,14 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}",
-  ],
+  content: ["./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}"],
   theme: {
     extend: {
-       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
       },
-     
     },
   },
 };
