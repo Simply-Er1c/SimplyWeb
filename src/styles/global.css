@@ -5,7 +5,7 @@
   --color-lightblue: #739fff;
   --color-sweetevil: #f81d22;
   --color-orangejuice: #f8751d;
-  --color-neoncyn: #3abff8;
+  --color-neoncyan: #3abff8;
   --color-futureviolet: #7a1dde;
   --color-snowwhite: #f0f2f5;
   --color-justdark: #101010;
@@ -17,11 +17,18 @@
   }
 
   .socialbtn {
-    @apply p-1 rounded-full transition-all duration-200 ease-out hover:scale-120;
+    @apply p-1 rounded-full transition-all duration-200 ease-out hover:scale-120 dark:text-neoncyan;
   }
 
+  .hero {
+    @apply bg-coolblue text-snowwhite min-h-screen flex flex-col items-center justify-center p-12 overflow-hidden dark:bg-justdark dark:text-snowwhite;
+  }
   .linkbtn {
-    @apply inline-flex p-3 space-x-2 rounded-md bg-coolblue hover:bg-lightblue text-snowwhite font-bold transition-all duration-200 ease-out hover:scale-110 hover:shadow-lg active:scale-90;
+    @apply inline-flex p-3 space-x-2 rounded-md bg-coolblue dark:bg-neoncyan  text-snowwhite dark:text-justdark font-bold transition-all duration-200 ease-out hover:scale-110 hover:shadow-lg active:scale-90;
+  }
+  .dialog {
+    @apply bg-snowwhite text-coolblue p-8 shadow-coolblue shadow-xl dark:inset-shadow-neoncyan 
+             text-start rounded-lg dark:bg-justdark dark:text-snowwhite dark:border-2 dark:border-neoncyan dark:shadow-neoncyan;
   }
 
   .grid-background {
@@ -29,39 +36,5 @@
       linear-gradient(to right, rgba(29, 91, 222, 0.1) 3px, transparent 1px),
       linear-gradient(to bottom, rgba(29, 91, 222, 0.1) 3px, transparent 1px);
     background-size: 40px 40px;
-  }
-
-  /* unused AI content just for fun  */
-  /* Estilo base del botón kawaii */
-  .kawaii-button {
-    background: linear-gradient(90deg, #ffb6e6 0%, #ff99cc 50%, #ffd6ec 100%);
-    display: inline-flex;
-    color: #fff;
-    padding: 12px 24px;
-    border: 2px solid transparent;
-    border-radius: 25px;
-    font-family: "Arial", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition:
-      transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-      border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .kawaii-button:hover {
-    transform: scale(1.1) translateY(-4px) rotate(-2deg);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    border-color: #ff99cc;
-  }
-
-  .kawaii-button:active {
-    transform: scale(0.95) translateY(2px) rotate(1deg);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border-color: #ffb6e6;
   }
 }

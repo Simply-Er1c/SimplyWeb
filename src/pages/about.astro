@@ -1,21 +1,60 @@
 ---
-
+// Import necessary components/layouts if needed
+import { Image } from "astro:assets";
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
 ---
 
-<html lang="en">
+<html lang="en" class="dark:bg-justdark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me - SimplyEr1c</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <main
-      class="min-h-screen flex flex-col items-center justify-center bg-coolblue text-snowwhite"
-    >
-      <h1 class="text-4xl font-bold mb-4">About Me</h1>
-      <p class="max-w-xl text-lg">
-        This is the About Me page. You can add your bio and more info here.
-      </p>
+  <body
+    class="transition-colors duration-300 dark:bg-justdark dark:text-snowwhite"
+  >
+    <Navbar />
+    <main class="hero">
+      <div class="relative z-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-2 w-2/3 lg:max-w-3/5 mx-auto p-8 text-center items-center"
+        >
+          <div>
+            <div
+              class="w-32 h-32 rounded-full bg-gray-300 mb-6 mx-auto flex items-center justify-center dark:bg-gray-700"
+            >
+              <!-- Placeholder for profile picture -->
+              <span class="text-5xl text-gray-500 dark:text-gray-300">👤</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-2">SimplyEr1c</h1>
+            <p class="mb-4 text-lg font-medium">
+              Digital Illustrator & Web Enthusiast
+            </p>
+          </div>
+          <div>
+            <ul class="mb-6 text-left text-base w-full max-w-xs mx-auto">
+              <li><strong>Nombre:</strong> Eric</li>
+              <li><strong>Ubicación:</strong> Ciudad de México</li>
+              <li><strong>Email:</strong> simplyer1c@email.com</li>
+              <li><strong>Idiomas:</strong> Español, Inglés</li>
+            </ul>
+            <p class="text-base text-left text-coolblue/80">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi
+              consectetur nisi, euismod euismod nisi nisi euismod. Sed euismod,
+              nisl eu consectetur consectetur, nisi nisi euismod nisi, euismod
+              euismod nisi nisi euismod.
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
