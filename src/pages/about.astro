@@ -3,6 +3,10 @@
 import { Image } from "astro:assets";
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
+import KritaIcon from "../components/KritaIcon.astro";
+import BlenderIcon from "../components/BlenderIcon.astro";
+import InkscapeIcon from "../components/InkscapeIcon.astro";
+import KdenliveIcon from "../components/KdenliveIcon.astro";
 ---
 
 <html lang="en" class="dark:bg-justdark">
@@ -21,40 +25,64 @@ import Navbar from "../components/Navbar.astro";
     class="transition-colors duration-300 dark:bg-justdark dark:text-snowwhite"
   >
     <Navbar />
-    <main class="hero">
-      <div class="relative z-10">
+    <main>
+      <section
+        class="min-h-[calc(100vh-80px)] flex items-center justify-center"
+      >
         <div
-          class="grid grid-cols-1 lg:grid-cols-2 gap-2 w-2/3 lg:max-w-3/5 mx-auto p-8 text-center items-center"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-2 w-full max-w-5xl mx-auto p-4 text-center items-center"
         >
-          <div>
+          <section class="flex flex-col items-center">
             <div
-              class="w-32 h-32 rounded-full bg-gray-300 mb-6 mx-auto flex items-center justify-center dark:bg-gray-700"
+              class="w-48 h-48 rounded-full bg-gray-300 mb-6 flex items-center justify-center dark:bg-gray-700"
             >
-              <!-- Placeholder for profile picture -->
+              <!-- Profile picture placeholder -->
               <span class="text-5xl text-gray-500 dark:text-gray-300">👤</span>
             </div>
-            <h1 class="text-4xl font-bold mb-2">SimplyEr1c</h1>
+            <h1 class="text-4xl font-bold mb-2">Eric T.</h1>
             <p class="mb-4 text-lg font-medium">
               Digital Illustrator & Web Enthusiast
             </p>
-          </div>
-          <div>
             <ul class="mb-6 text-left text-base w-full max-w-xs mx-auto">
-              <li><strong>Nombre:</strong> Eric</li>
-              <li><strong>Ubicación:</strong> Ciudad de México</li>
-              <li><strong>Email:</strong> simplyer1c@email.com</li>
+              <li><strong>Apodo:</strong> SimplyEr1c</li>
+              <li><strong>Ubicación:</strong> Venezuela</li>
+              <li><strong>Email:</strong> SimplyEr1c@protonmail.com</li>
               <li><strong>Idiomas:</strong> Español, Inglés</li>
             </ul>
-            <p class="text-base text-left text-coolblue/80">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi
-              consectetur nisi, euismod euismod nisi nisi euismod. Sed euismod,
-              nisl eu consectetur consectetur, nisi nisi euismod nisi, euismod
-              euismod nisi nisi euismod.
+          </section>
+          <section>
+            <p class="text-justify">
+              ¡Hola! Soy Er1c, un ilustrador autodidacta que le gusta explorar
+              una variedad de herramientas y técnicas para hacer obras de arte.
+              Desde Raster, Vectores y Modelado 3D. Empecé aprendiendo con
+              gráficos vectoriales en internet con 16 años. Años más tarde
+              aprendí modelado 3D e ilustración digital con plataformas de
+              cursos online como Domestika y Udemy. Me gusta compartir mi visión
+              del mundo a través del Arte y descubrir nuevas habilidades. Mi
+              objetivo es crear un recuerdo para la gente de todo el mundo y
+              compartir mis conocimientos.
             </p>
-          </div>
+            <ul class="flex flex-wrap gap-4 justify-center my-8 gap-x-3">
+              <li>
+                <KritaIcon />
+                <span class="text-sm">Krita</span>
+              </li>
+              <li>
+                <BlenderIcon />
+                <span class="text-sm">Blender</span>
+              </li>
+              <li>
+                <InkscapeIcon />
+                <span class="text-sm">Inkscape</span>
+              </li>
+              <li>
+                <KdenliveIcon />
+                <span class="text-sm">Kdenlive</span>
+              </li>
+            </ul>
+          </section>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>

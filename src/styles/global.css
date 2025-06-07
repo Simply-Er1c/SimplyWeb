@@ -21,10 +21,10 @@
   }
 
   .hero {
-    @apply bg-coolblue text-snowwhite min-h-screen flex flex-col items-center justify-center p-0 md:p-8 lg:p-12 overflow-hidden dark:bg-justdark dark:text-snowwhite;
+    @apply bg-coolblue text-snowwhite h-dvh flex flex-col items-center justify-center p-0 md:p-8 lg:p-12 overflow-hidden dark:bg-justdark dark:text-snowwhite;
   }
   .linkbtn {
-    @apply inline-flex p-3 space-x-2 rounded-md bg-coolblue dark:bg-neoncyan text-snowwhite dark:text-justdark font-bold transition-all duration-200 ease-out hover:scale-110 hover:shadow-lg active:scale-90 focus:outline-none focus:ring-2 focus:ring-neoncyan;
+    @apply inline-flex p-3 space-x-2 rounded-md bg-coolblue dark:bg-neoncyan text-snowwhite dark:text-justdark font-bold transition-all duration-200 ease-out hover:scale-110 hover:shadow-lg active:scale-90 focus:outline-none focus:ring-2 focus:ring-neoncyan w-36;
   }
   .dialog {
     @apply bg-snowwhite text-coolblue p-4 md:p-10 m-2 shadow-coolblue shadow-xl dark:inset-shadow-neoncyan 
