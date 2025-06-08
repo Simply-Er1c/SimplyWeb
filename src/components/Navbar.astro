@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import ExtIcon from "./icons/ExtIcon.astro";
+import SimplyEr1cLogo from "./icons/SimplyEr1cLogo.astro";
 ---
 
 <nav
@@ -26,45 +28,33 @@ import "../styles/global.css";
           d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
-    <a href="/">
-      <svg
-        class="h-8 w-8 text-snowwhite"
-        fill="currentColor"
-        width="72.467995mm"
-        height="89.500992mm"
-        viewBox="0 0 72.467996 89.500989"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          id="layer2"
-          style="display:inline"
-          transform="translate(-238.27203,467.62205)"
-        >
-          <path
-            d="m 269.34632,-467.62206 a 0.87670642,0.87670642 0 0 0 -0.62012,1.49655 l 11.92434,11.9233 a 5.1103514,5.1103514 0 0 0 3.61321,1.49655 h 25.59947 a 0.87675214,0.87675214 0 0 0 0.62012,-1.49655 l -11.9233,-11.9233 a 5.110085,5.110085 0 0 0 -3.61322,-1.49655 z m -17.03462,0.87643 a 2.1166774,2.1166774 0 0 0 -1.49655,0.62012 l -11.9233,11.9233 a 2.1166505,2.1166505 0 0 0 0,2.9931 l 26.84125,26.84074 a 2.1166522,2.1166522 0 0 1 0,2.9931 l -26.84125,26.84125 a 2.1166692,2.1166692 0 0 0 0,2.9931 l 11.9233,11.9233 a 2.1166646,2.1166646 0 0 0 2.9931,0 l 41.75766,-41.75765 a 2.1166573,2.1166573 0 0 0 0,-2.9931 l -41.75766,-41.75714 a 2.1166774,2.1166774 0 0 0 -1.49655,-0.62012 z m 31.95102,73.70816 a 5.1104464,5.1104464 0 0 0 -3.61373,1.49655 l -11.92434,11.9233 a 0.87669013,0.87669013 0 0 0 0.62012,1.49655 h 25.60102 a 5.1103495,5.1103495 0 0 0 3.61322,-1.49655 l 11.92433,-11.9233 a 0.87670675,0.87670675 0 0 0 -0.62012,-1.49655 z"
-            fill="currentColor"
-            style="display:inline;paint-order:stroke markers fill"
-            id="path44"></path>
-        </g>
-      </svg>
-    </a>
+    <a href="/" class="text-snowhite"> <SimplyEr1cLogo /> </a>
   </div>
 
   <!-- Right: Menu (hidden on mobile) -->
-  <ul class="hidden lg:flex gap-6 text-lg font-medium">
+  <ul class="hidden lg:flex items-center gap-6 text-lg font-medium">
     <li>
-      <a href="#about" class="">About Me</a>
+      <a
+        href="/about"
+        class="focus:outline-none focus:ring-2 focus:ring-coolblue dark:focus:ring-neoncyan rounded"
+      >
+        About Me
+      </a>
     </li>
     <li>
-      <a href="#contact" class="">Contact</a>
+      <a
+        href="/contact"
+        class="focus:outline-none focus:ring-2 focus:ring-coolblue dark:focus:ring-neoncyan rounded"
+        >Contact</a
+      >
     </li>
     <li>
       <a
         href="https://cara.app/simplyer1c/portfolio"
         target="_blank"
         rel="noopener"
-        class="bg-coolblue text-snowwhite dark:bg-neoncyan dark:text-justdark font-bold p-2 rounded-lg"
-        >Artwork</a
+        class="inline-flex gap-x-2 bg-snowwhite text-coolblue dark:bg-neoncyan dark:text-justdark font-bold p-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-coolblue dark:focus:ring-neoncyan"
+        >Artwork <ExtIcon /></a
       >
     </li>
   </ul>

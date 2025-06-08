@@ -1,21 +1,148 @@
 ---
-
+import XIcon from "../components/icons/XIcon.astro";
+import BlueskyIcon from "../components/icons/BlueskyIcon.astro";
+import TwitchIcon from "../components/icons/TwitchIcon.astro";
+import KickIcon from "../components/icons/KickIcon.astro";
+import MastodonIcon from "../components/icons/MastodonIcon.astro";
+import InstagramIcon from "../components/icons/InstagramIcon.astro";
+import TumblrIcon from "../components/icons/TumblrIcon.astro";
+import Navbar from "../components/Navbar.astro";
+import MessageIcon from "../components/icons/MessageIcon.astro";
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - SimplyEr1c</title>
+    <title>Contacto</title>
   </head>
-  <body>
+  <body class="bg-coolblue text-snowwhite dark:bg-justdark dark:text-snowwhite">
+    <Navbar />
     <main
-      class="min-h-screen flex flex-col items-center justify-center bg-coolblue text-snowwhite"
+      class="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center"
     >
-      <h1 class="text-4xl font-bold mb-4">Contact</h1>
-      <p class="max-w-xl text-lg">
-        This is the Contact page. You can add your contact form or info here.
-      </p>
+      <section
+        class="relative w-full flex flex-col items-center justify-center py-10"
+      >
+        <div class="dialog rounded-2xl shadow-xl p-8 max-w-3xl w-full mx-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Social Media -->
+            <div>
+              <h2 class="text-2xl font-semibold mb-4 text-center">
+                Redes Sociales
+              </h2>
+              <div class="flex flex-wrap gap-3 justify-center">
+                <a
+                  href="https://x.com/SimplyEr1c"
+                  class="sociallink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X (Twitter)"
+                  ><XIcon /> Twitter/X
+                </a>
+                <a
+                  href="https://bsky.app/profile/simplyer1c.bsky.social"
+                  class="sociallink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Bluesky"
+                  ><BlueskyIcon /> Bluesky
+                </a>
+                <a
+                  href="https://www.twitch.tv/simplyer1c"
+                  class="sociallink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitch"
+                  ><TwitchIcon /> Twitch
+                </a>
+                <a
+                  href="https://kick.com/simplyer1c"
+                  class="sociallink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Kick"
+                  ><KickIcon /> Kick
+                </a>
+                <a
+                  href="https://mastodon.social/@SimplyEr1c"
+                  class="sociallink"
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  aria-label="Mastodon"
+                  ><MastodonIcon /> Mastodon
+                </a>
+                <a
+                  href="https://instagram.com/simplyer1c"
+                  class="sociallink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  ><InstagramIcon /> Instagram
+                </a>
+                <a
+                  href="https://simplyer1c.tumblr.com"
+                  class="sociallink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Tumblr"
+                  ><TumblrIcon /> Tumblr
+                </a>
+              </div>
+            </div>
+            <!-- Contacto -->
+            <div>
+              <h2 class="text-2xl font-semibold mb-4 text-center">Contacto</h2>
+              <div class="flex flex-wrap gap-3 justify-center">
+                <a
+                  href="mailto:SimplyEr1c@protonmail.com"
+                  class="sociallink"
+                  aria-label="Email"><MessageIcon /> E-Mail</a
+                >
+                <a href="" class="sociallink" aria-label="Email"
+                  ><MessageIcon /> Discord</a
+                >
+                <a href="" class="sociallink" aria-label="Email"
+                  ><MessageIcon /> Revolt</a
+                >
+                <a href="" class="sociallink" aria-label="Email"
+                  ><MessageIcon /> Matrix</a
+                >
+              </div>
+            </div>
+            <!-- Portfolio -->
+            <div>
+              <h2 class="text-2xl font-semibold mb-4 text-center">Portfolio</h2>
+              <div class="flex flex-wrap gap-3 justify-center">
+                <a
+                  href="https://cara.app/simplyer1c/portfolio"
+                  class="sociallink"
+                  target="_blank"
+                  rel="noopener">Cara</a
+                >
+                <button class="socialbtn opacity-50 cursor-not-allowed"
+                  >Próximamente</button
+                >
+              </div>
+            </div>
+            <!-- Web3 -->
+            <div>
+              <h2 class="text-2xl font-semibold mb-4 text-center">Web3</h2>
+              <div class="flex flex-wrap gap-3 justify-center">
+                <a href="" class="sociallink" aria-label="Email"
+                  ><MessageIcon /> Mallow.art</a
+                >
+                <a href="" class="sociallink" aria-label="Email"
+                  ><MessageIcon /> Objkt</a
+                >
+                <a href="" class="sociallink" aria-label="Email"
+                  ><MessageIcon /> Foundation</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

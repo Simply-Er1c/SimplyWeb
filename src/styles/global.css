@@ -19,6 +19,9 @@
   .socialbtn {
     @apply p-1 rounded-full transition-all duration-200 ease-out hover:scale-120 dark:text-neoncyan;
   }
+  .sociallink {
+    @apply flex items-center gap-2 px-4 py-2 rounded-lg bg-coolblue text-snowwhite font-semibold shadow hover:scale-105 transition-all duration-200 dark:bg-neoncyan dark:text-justdark;
+  }
 
   .hero {
     @apply bg-coolblue text-snowwhite h-dvh flex flex-col items-center justify-center p-0 md:p-8 lg:p-12 overflow-hidden dark:bg-justdark dark:text-snowwhite;
@@ -27,8 +30,8 @@
     @apply inline-flex p-3 space-x-2 rounded-md bg-coolblue dark:bg-neoncyan text-snowwhite dark:text-justdark font-bold transition-all duration-200 ease-out hover:scale-110 hover:shadow-lg active:scale-90 focus:outline-none focus:ring-2 focus:ring-neoncyan w-36;
   }
   .dialog {
-    @apply bg-snowwhite text-coolblue p-4 md:p-10 m-2 shadow-coolblue shadow-xl dark:inset-shadow-neoncyan 
-             text-start rounded-lg dark:bg-justdark dark:text-snowwhite dark:border-2 dark:border-neoncyan dark:shadow-neoncyan;
+    @apply bg-snowwhite text-coolblue p-4 md:p-10 m-2 shadow-coolblue shadow-xl 
+             text-start rounded-lg dark:bg-justdark dark:text-snowwhite dark:border-2 dark:border-neoncyan;
   }
 
   .grid-background {

@@ -3,10 +3,10 @@
 import { Image } from "astro:assets";
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
-import KritaIcon from "../components/KritaIcon.astro";
-import BlenderIcon from "../components/BlenderIcon.astro";
-import InkscapeIcon from "../components/InkscapeIcon.astro";
-import KdenliveIcon from "../components/KdenliveIcon.astro";
+import KritaIcon from "../components/icons/KritaIcon.astro";
+import BlenderIcon from "../components/icons/BlenderIcon.astro";
+import InkscapeIcon from "../components/icons/InkscapeIcon.astro";
+import KdenliveIcon from "../components/icons/KdenliveIcon.astro";
 ---
 
 <html lang="en" class="dark:bg-justdark">
@@ -21,13 +21,11 @@ import KdenliveIcon from "../components/KdenliveIcon.astro";
       rel="stylesheet"
     />
   </head>
-  <body
-    class="transition-colors duration-300 dark:bg-justdark dark:text-snowwhite"
-  >
+  <body class="bg-coolblue dark:bg-justdark text-snowwhite">
     <Navbar />
     <main>
       <section
-        class="min-h-[calc(100vh-80px)] flex items-center justify-center"
+        class="min-h-[calc(100vh-80px)] flex items-center justify-center p-4"
       >
         <div
           class="grid grid-cols-1 lg:grid-cols-2 gap-2 w-full max-w-5xl mx-auto p-4 text-center items-center"
@@ -40,9 +38,7 @@ import KdenliveIcon from "../components/KdenliveIcon.astro";
               <span class="text-5xl text-gray-500 dark:text-gray-300">👤</span>
             </div>
             <h1 class="text-4xl font-bold mb-2">Eric T.</h1>
-            <p class="mb-4 text-lg font-medium">
-              Digital Illustrator & Web Enthusiast
-            </p>
+            <p class="mb-4 text-lg font-medium">Ilustrador Digital</p>
             <ul class="mb-6 text-left text-base w-full max-w-xs mx-auto">
               <li><strong>Apodo:</strong> SimplyEr1c</li>
               <li><strong>Ubicación:</strong> Venezuela</li>
@@ -62,22 +58,63 @@ import KdenliveIcon from "../components/KdenliveIcon.astro";
               objetivo es crear un recuerdo para la gente de todo el mundo y
               compartir mis conocimientos.
             </p>
-            <ul class="flex flex-wrap gap-4 justify-center my-8 gap-x-3">
-              <li>
+            <h1 class="text-2xl font-bold my-5">Software</h1>
+            <ul class="flex justify-center gap-2 md:gap-8">
+              <li class="flex flex-col items-center w-28">
                 <KritaIcon />
-                <span class="text-sm">Krita</span>
+                <span class="text-sm mb-1">Krita</span>
+                <div
+                  class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+                >
+                  <div
+                    class="bg-blue-500 h-2.5 rounded-full"
+                    style="width: 90%"
+                  >
+                  </div>
+                </div>
+                <span class="text-xs mt-1">Avanzado</span>
               </li>
-              <li>
+              <li class="flex flex-col items-center w-28">
                 <BlenderIcon />
-                <span class="text-sm">Blender</span>
+                <span class="text-sm mb-1">Blender</span>
+                <div
+                  class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+                >
+                  <div
+                    class="bg-orange-500 h-2.5 rounded-full"
+                    style="width: 75%"
+                  >
+                  </div>
+                </div>
+                <span class="text-xs mt-1">Intermedio</span>
               </li>
-              <li>
+              <li class="flex flex-col items-center w-28">
                 <InkscapeIcon />
-                <span class="text-sm">Inkscape</span>
+                <span class="text-sm mb-1">Inkscape</span>
+                <div
+                  class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+                >
+                  <div
+                    class="bg-green-500 h-2.5 rounded-full"
+                    style="width: 80%"
+                  >
+                  </div>
+                </div>
+                <span class="text-xs mt-1">Avanzado</span>
               </li>
-              <li>
+              <li class="flex flex-col items-center w-28">
                 <KdenliveIcon />
-                <span class="text-sm">Kdenlive</span>
+                <span class="text-sm mb-1">Kdenlive</span>
+                <div
+                  class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+                >
+                  <div
+                    class="bg-purple-500 h-2.5 rounded-full"
+                    style="width: 60%"
+                  >
+                  </div>
+                </div>
+                <span class="text-xs mt-1">Básico</span>
               </li>
             </ul>
           </section>
