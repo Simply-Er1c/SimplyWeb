@@ -33,14 +33,16 @@ import MailIcon from "../components/icons/MailIcon.astro";
       <section
         class="relative w-full flex flex-col items-center justify-center py-10"
       >
-        <div class="dialog rounded-2xl shadow-xl p-8 max-w-3xl w-full mx-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="dialog mx-8 md:mx-0 rounded-2xl shadow-xl p-8 max-w-5xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 item-start">
             <!-- Social Media -->
             <div>
               <h2 class="text-2xl font-semibold mb-4 text-center">
                 Redes Sociales
               </h2>
-              <div class="flex flex-wrap gap-3 justify-center">
+              <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-3 justify-evenly items-stretch"
+              >
                 <a
                   href="https://x.com/SimplyEr1c"
                   class="sociallink"
@@ -74,7 +76,7 @@ import MailIcon from "../components/icons/MailIcon.astro";
                   ><KickIcon /> Kick
                 </a>
                 <a
-                  href="https://mastodon.social/@SimplyEr1c"
+                  href="https://mas.to/@SimplyEr1c"
                   class="sociallink"
                   target="_blank"
                   rel="me noopener noreferrer"
@@ -102,7 +104,9 @@ import MailIcon from "../components/icons/MailIcon.astro";
             <!-- Contacto -->
             <div>
               <h2 class="text-2xl font-semibold mb-4 text-center">Contacto</h2>
-              <div class="flex flex-wrap gap-3 justify-center">
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-evenly items-stretch"
+              >
                 <a
                   href="mailto:SimplyEr1c@protonmail.com"
                   class="sociallink"
@@ -134,7 +138,9 @@ import MailIcon from "../components/icons/MailIcon.astro";
             <!-- Portfolio -->
             <div>
               <h2 class="text-2xl font-semibold mb-4 text-center">Portfolio</h2>
-              <div class="flex flex-wrap gap-3 justify-center">
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-evenly items-stretch"
+              >
                 <a
                   href="https://cara.app/simplyer1c/portfolio"
                   class="sociallink"
@@ -152,16 +158,24 @@ import MailIcon from "../components/icons/MailIcon.astro";
             <!-- Web3 -->
             <div>
               <h2 class="text-2xl font-semibold mb-4 text-center">Web3</h2>
-              <div class="flex flex-wrap gap-3 justify-center">
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-evenly items-stretch"
+              >
                 <a href="" class="sociallink" aria-label="Mallow.art"
                   ><MallowIcon /> Mallow.art</a
                 >
-                <a href="" class="sociallink" aria-label="Objkt">
-                  <b>Objkt</b>.com</a
-                >
+                <a href="" class="sociallink" aria-label="Objkt"> Objkt.com</a>
                 <a href="" class="sociallink" aria-label="Foundation"
                   ><FoundationIcon /> Foundation</a
                 >
+                <a
+                  href="https://x.com/0xSimplyEr1c"
+                  class="sociallink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X (Twitter)"
+                  ><XIcon /> Web3 Twitter/X
+                </a>
               </div>
             </div>
           </div>
