@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+---
+
+<Layout>
+  <main
+    class="dark bg-justdark h-full w-full flex flex-col items-center justify-center text-snowwhite"
+  >
+    <div class="inline-flex flex-row items-center justify-center">
+      <b class="text-8xl md:text-[300px] font-black leading-none">4</b>
+      <Image
+        loading={"eager"}
+        src="/er1cderp.webp"
+        alt="er1cpokerface"
+        height={300}
+        width={300}
+        class="w-24 h-24 md:w-[300px] md:h-[300px]"
+      />
+      <b class="text-8xl md:text-[300px] font-black leading-none">4</b>
+    </div>
+    <h1 class="md:text-4xl font-bold">Nada que ver aquí.</h1>
+    <a href="/" class="linkbtn mt-8 w-max bg-neoncyan text-justdark"
+      >Volver a la página principal</a
+    >
+  </main>
+</Layout>

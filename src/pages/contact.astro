@@ -1,186 +1,187 @@
 ---
-import XIcon from "../components/icons/XIcon.astro";
-import BlueskyIcon from "../components/icons/BlueskyIcon.astro";
-import TwitchIcon from "../components/icons/TwitchIcon.astro";
-import KickIcon from "../components/icons/KickIcon.astro";
-import MastodonIcon from "../components/icons/MastodonIcon.astro";
-import InstagramIcon from "../components/icons/InstagramIcon.astro";
-import TumblrIcon from "../components/icons/TumblrIcon.astro";
+import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
-import MessageIcon from "../components/icons/MessageIcon.astro";
-import DiscordIcon from "../components/icons/DiscordIcon.astro";
 import RevoltIcon from "../components/icons/RevoltIcon.astro";
 import MatrixIcon from "../components/icons/MatrixIcon.astro";
-import CaraIcon from "../components/icons/CaraIcon.astro";
 import MallowIcon from "../components/icons/MallowIcon.astro";
-import ObjktIcon from "../components/icons/ObjktIcon.astro";
 import FoundationIcon from "../components/icons/FoundationIcon.astro";
 import PixivIcon from "../components/icons/PixivIcon.astro";
-import MailIcon from "../components/icons/MailIcon.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto</title>
-  </head>
-  <body class="bg-coolblue text-snowwhite dark:bg-justdark dark:text-snowwhite">
+<Layout>
+  <main
+    class="min-h-dvh bg-coolblue text-snowwhite dark:bg-justdark dark:text-snowwhite"
+  >
     <Navbar />
-    <main
-      class="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center"
+    <section
+      class="relative w-full flex flex-col items-center justify-center py-10 min-h-[calc(100dvh-6rem)]"
     >
-      <section
-        class="relative w-full flex flex-col items-center justify-center py-10"
-      >
-        <div class="dialog mx-8 md:mx-0 rounded-2xl shadow-xl p-8 max-w-5xl">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 item-start">
-            <!-- Social Media -->
-            <div>
-              <h2 class="text-2xl font-semibold mb-4 text-center">
-                Redes Sociales
-              </h2>
-              <div
-                class="grid grid-cols-1 md:grid-cols-3 gap-3 justify-evenly items-stretch"
+      <div class="dialog mx-8 md:mx-0 rounded-2xl shadow-xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 item-start">
+          <!-- Social Media -->
+          <div>
+            <h2 class="text-2xl font-semibold mb-4 text-center">
+              Redes Sociales
+            </h2>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 gap-3 justify-evenly items-stretch"
+            >
+              <a
+                href="https://x.com/SimplyEr1c"
+                class="sociallink"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
               >
-                <a
-                  href="https://x.com/SimplyEr1c"
-                  class="sociallink"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="X (Twitter)"
-                  ><XIcon /> Twitter
-                </a>
-                <a
-                  href="https://bsky.app/profile/simplyer1c.bsky.social"
-                  class="sociallink"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Bluesky"
-                  ><BlueskyIcon /> Bluesky
-                </a>
-                <a
-                  href="https://www.twitch.tv/simplyer1c"
-                  class="sociallink"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Twitch"
-                  ><TwitchIcon /> Twitch
-                </a>
-                <a
-                  href="https://kick.com/simplyer1c"
-                  class="sociallink"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Kick"
-                  ><KickIcon /> Kick
-                </a>
-                <a
-                  href="https://mas.to/@SimplyEr1c"
-                  class="sociallink"
-                  target="_blank"
-                  rel="me noopener noreferrer"
-                  aria-label="Mastodon"
-                  ><MastodonIcon /> Mastodon
-                </a>
-                <a
-                  href="https://instagram.com/simplyer1c"
-                  class="sociallink"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  ><InstagramIcon /> Instagram
-                </a>
-                <a
-                  href="https://simplyer1c.tumblr.com"
-                  class="sociallink"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Tumblr"
-                  ><TumblrIcon /> Tumblr
-                </a>
-              </div>
+                <i class="ti ti-brand-x text-3xl"></i> Twitter
+              </a>
+              <a
+                href="https://bsky.app/profile/simplyer1c.bsky.social"
+                class="sociallink"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Bluesky"
+              >
+                <i class="ti ti-brand-bluesky text-3xl"></i> Bluesky
+              </a>
+              <a
+                href="https://www.twitch.tv/simplyer1c"
+                class="sociallink"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitch"
+                ><i class="ti ti-brand-twitch text-3xl"></i> Twitch
+              </a>
+              <a
+                href="https://kick.com/simplyer1c"
+                class="sociallink"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Kick"
+                ><i class="ti ti-brand-kick text-3xl"></i> Kick
+              </a>
+              <a
+                href="https://mas.to/@SimplyEr1c"
+                class="sociallink"
+                target="_blank"
+                rel="me noopener noreferrer"
+                aria-label="Mastodon"
+                ><i class="ti ti-brand-mastodon text-3xl"></i> Mastodon
+              </a>
+              <a
+                href="https://instagram.com/simplyer1c"
+                class="sociallink"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                ><i class="ti ti-brand-instagram text-3xl"></i> Instagram
+              </a>
+              <a
+                href="https://simplyer1c.tumblr.com"
+                class="sociallink"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tumblr"
+                ><i class="ti ti-brand-tumblr text-3xl"></i> Tumblr
+              </a>
             </div>
-            <!-- Contacto -->
-            <div>
-              <h2 class="text-2xl font-semibold mb-4 text-center">Contacto</h2>
-              <div
-                class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-evenly items-stretch"
+          </div>
+          <!-- Contacto -->
+          <div>
+            <h2 class="text-2xl font-semibold mb-4 text-center">Contacto</h2>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-evenly items-stretch"
+            >
+              <a
+                href="mailto:SimplyEr1c@protonmail.com"
+                class="sociallink"
+                aria-label="Email"><i class="ti ti-mail text-2xl"></i> E-Mail</a
               >
-                <a
-                  href="mailto:SimplyEr1c@protonmail.com"
-                  class="sociallink"
-                  aria-label="Email"><MailIcon /> E-Mail</a
-                >
-                <a
-                  href="https://discordapp.com/channels/@me/641656249057935370/"
-                  class="sociallink"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  aria-label="Discord"><DiscordIcon /></a
-                >
-                <a
-                  href="https://revolt.chat/qr?v2Zmb3JtYXRqcnFyJHVzZXIkMGZhdmF0YXJ4KlVyUjhxb3dXZEM4RW8tZXd4V1BrVHRUcmVObjlLN1hxZjNLVFN5MUVGQ2tkaXNwbGF5TmFtZWpTaW1wbHlFcjFjaHVzZXJuYW1lalNpbXBseUVyMWNtZGlzY3JpbWluYXRvcmQ4NTI3YmlkeBowMUpRMjZCNUc4MEREU0U5VjFFUDREQUpLQf8="
-                  class="sociallink"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  aria-label="Revolt"><RevoltIcon /></a
-                >
-                <a
-                  href="https://matrix.to/#/@simplyer1c:matrix.org"
-                  class="sociallink"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  aria-label="Matrix"><MatrixIcon /> Matrix</a
-                >
-              </div>
+              <a
+                href="https://discordapp.com/channels/@me/641656249057935370/"
+                class="sociallink"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Discord"
+                ><i class="ti ti-brand-discord-filled text-2xl"></i> Discord</a
+              >
+              <a
+                href="https://revolt.chat/qr?v2Zmb3JtYXRqcnFyJHVzZXIkMGZhdmF0YXJ4KlVyUjhxb3dXZEM4RW8tZXd4V1BrVHRUcmVObjlLN1hxZjNLVFN5MUVGQ2tkaXNwbGF5TmFtZWpTaW1wbHlFcjFjaHVzZXJuYW1jalNpbXBseUVyMWNtZGlzY3JpbWluYXRvcmQ4NTI3YmlkeBowMUpRMjZCNUc4MEREU0U5VjFFUDREQUpLQf8="
+                class="sociallink"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Revolt"><RevoltIcon /> Revolt</a
+              >
+              <a
+                href="https://matrix.to/#/@simplyer1c:matrix.org"
+                class="sociallink"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Matrix"><MatrixIcon /> Matrix</a
+              >
             </div>
-            <!-- Portfolio -->
-            <div>
-              <h2 class="text-2xl font-semibold mb-4 text-center">Portfolio</h2>
-              <div
-                class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-evenly items-stretch"
+          </div>
+          <!-- Portfolio -->
+          <div>
+            <h2 class="text-2xl font-semibold mb-4 text-center">Portfolio</h2>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-evenly items-stretch"
+            >
+              <a
+                href="https://cara.app/simplyer1c/portfolio"
+                class="sociallink"
+                target="_blank"
+                rel="noopener">Cara.app</a
               >
-                <a
-                  href="https://cara.app/simplyer1c/portfolio"
-                  class="sociallink"
-                  target="_blank"
-                  rel="noopener">Cara.app</a
-                >
-                <a
-                  href="https://www.pixiv.net/en/users/100654117"
-                  class="sociallink"
-                  target="_blank"
-                  rel="noopener"><PixivIcon /> Pixiv</a
-                >
-              </div>
+              <a
+                href="https://www.pixiv.net/en/users/100654117"
+                class="sociallink"
+                target="_blank"
+                rel="noopener"><PixivIcon /> Pixiv</a
+              >
             </div>
-            <!-- Web3 -->
-            <div>
-              <h2 class="text-2xl font-semibold mb-4 text-center">Web3</h2>
-              <div
-                class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-evenly items-stretch"
+          </div>
+          <!-- Web3 -->
+          <div>
+            <h2 class="text-2xl font-semibold mb-4 text-center">Web3</h2>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-evenly items-stretch"
+            >
+              <a
+                href="https://www.mallow.art/u/simplyer1c"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="sociallink"
+                aria-label="Mallow.art"><MallowIcon /> Mallow.art</a
               >
-                <a href="" class="sociallink" aria-label="Mallow.art"
-                  ><MallowIcon /> Mallow.art</a
-                >
-                <a href="" class="sociallink" aria-label="Objkt"> Objkt.com</a>
-                <a href="" class="sociallink" aria-label="Foundation"
-                  ><FoundationIcon /> Foundation</a
-                >
-                <a
-                  href="https://x.com/0xSimplyEr1c"
-                  class="sociallink"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="X (Twitter)"
-                  ><XIcon /> Web3 Twitter/X
-                </a>
-              </div>
+              <a
+                href="https://objkt.com/@simplyer1c"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="sociallink"
+                aria-label="Objkt"
+              >
+                Objkt.com</a
+              >
+              <a
+                href="https://foundation.app/@SimplyEr1c"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="sociallink"
+                aria-label="Foundation"><FoundationIcon /> Foundation</a
+              >
+              <a
+                href="https://x.com/0xSimplyEr1c"
+                class="sociallink"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+                ><i class="ti ti-brand-x-filled text-3xl"></i> Web3 Twitter
+              </a>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-  </body>
-</html>
+      </div>
+    </section>
+  </main>
+</Layout>

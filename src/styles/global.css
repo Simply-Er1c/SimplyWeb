@@ -17,10 +17,10 @@
   }
 
   .socialbtn {
-    @apply p-1 rounded-full transition-all duration-200 ease-out hover:scale-120 dark:text-neoncyan;
+    @apply m-2 rounded-full transition-all duration-200 ease-out hover:scale-120 dark:text-neoncyan dark:focus:ring-4  dark:ring-neoncyan;
   }
   .sociallink {
-    @apply inline-flex items-center justify-center gap-4 p-3 rounded-lg bg-coolblue text-snowwhite font-bold shadow hover:scale-105 transition-all duration-200 dark:bg-neoncyan dark:text-justdark active:scale-95 active:shadow-lg;
+    @apply inline-flex items-center justify-start gap-x-2 p-3 rounded-lg bg-coolblue text-snowwhite font-bold shadow hover:scale-110 transition-all duration-200 dark:bg-neoncyan dark:text-justdark active:scale-95 active:shadow-lg;
   }
 
   .hero {
