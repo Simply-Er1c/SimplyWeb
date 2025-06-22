@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
+import er1cderp from "../assets/er1cderp.webp";
 ---
 
 <Layout>
@@ -10,8 +11,8 @@ import Image from "astro/components/Image.astro";
     <div class="inline-flex flex-row items-center justify-center">
       <b class="text-8xl md:text-[300px] font-black leading-none">4</b>
       <Image
-        loading={"eager"}
-        src="/er1cderp.webp"
+        loading="eager"
+        src={er1cderp}
         alt="er1cpokerface"
         height={300}
         width={300}
