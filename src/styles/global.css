@@ -20,7 +20,7 @@
     @apply m-2 rounded-full transition-all duration-200 ease-out hover:scale-120 dark:text-neoncyan dark:focus:ring-4  dark:ring-neoncyan;
   }
   .sociallink {
-    @apply inline-flex items-center justify-start gap-x-2 p-3 rounded-lg bg-coolblue text-snowwhite font-bold shadow hover:scale-110 transition-all duration-200 dark:bg-neoncyan dark:text-justdark active:scale-95 active:shadow-lg;
+    @apply inline-flex items-center  gap-x-2 p-3 rounded-lg bg-coolblue text-snowwhite font-bold shadow hover:scale-110 transition-all duration-200 dark:bg-neoncyan dark:text-justdark active:scale-95 active:shadow-lg;
   }
 
   .hero {
@@ -30,7 +30,7 @@
     @apply inline-flex p-3 space-x-2 rounded-md bg-coolblue dark:bg-neoncyan text-snowwhite dark:text-justdark font-bold transition-all duration-200 ease-out hover:scale-110 hover:shadow-lg active:scale-90 focus:outline-none focus:ring-2 focus:ring-neoncyan w-36;
   }
   .dialog {
-    @apply bg-snowwhite text-coolblue p-4 md:p-10 m-2 shadow-coolblue shadow-xl 
+    @apply bg-snowwhite text-coolblue p-8 md:p-10  shadow-coolblue shadow-xl 
              text-start rounded-lg dark:bg-justdark dark:text-snowwhite dark:border-2 dark:border-neoncyan;
   }
 
