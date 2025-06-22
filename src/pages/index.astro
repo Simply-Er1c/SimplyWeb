@@ -1,17 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
 import { Image } from "astro:assets";
+import SadMachine11 from "../assets/SadMachine11.png";
 import BrushIcon from "../components/icons/BrushIcon.astro";
 import UserIcon from "../components/icons/UserIcon.astro";
 import MessageIcon from "../components/icons/MessageIcon.astro";
-import XIcon from "../components/icons/XIcon.astro";
-import BlueskyIcon from "../components/icons/BlueskyIcon.astro";
-import TwitchIcon from "../components/icons/TwitchIcon.astro";
-import KickIcon from "../components/icons/KickIcon.astro";
-import MastodonIcon from "../components/icons/MastodonIcon.astro";
-import InstagramIcon from "../components/icons/InstagramIcon.astro";
-import TumblrIcon from "../components/icons/TumblrIcon.astro";
 ---
 
 <Layout>
@@ -20,7 +13,7 @@ import TumblrIcon from "../components/icons/TumblrIcon.astro";
     <section class="relative hero">
       <!-- Background image layer -->
       <Image
-        src="/SadMachine11.png"
+        src={SadMachine11}
         width={1920}
         height={1080}
         loading="eager"
@@ -53,13 +46,13 @@ import TumblrIcon from "../components/icons/TumblrIcon.astro";
               <BrushIcon />
               <p>Artwork</p>
             </a>
-            <a href="/about" class="linkbtn">
+            <a href="/SimplyWeb/about" class="linkbtn">
               <UserIcon />
-              <p>About Me</p>
+              <p>Sobre mí</p>
             </a>
-            <a href="/contact" class="linkbtn">
+            <a href="/SimplyWeb/contact" class="linkbtn">
               <MessageIcon />
-              <p>Contact</p>
+              <p>Links</p>
             </a>
           </div>
 
