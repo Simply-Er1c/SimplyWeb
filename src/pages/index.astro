@@ -1,18 +1,125 @@
 ---
 // Import necessary components/layouts if needed
-
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import { Image } from "astro:assets";
+import WebsiteDrawingWIP from "../assets/WebsiteDrawingWIP.webp";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="SimplyEr1c's portfolio page" />
-        <title>SimplyEr1c</title>
-        <link rel="icon" type="image/svg+xml" href="/" />
-    </head>
-<body>
-  <h1>Hello world again</h1>
-</body>
-</html>
+
+<Layout>
+    <!-- Sticky Navbar -->
+    <!-- TODO: Make this navbar with icons based on the sections  -->
+    <nav
+        class="z-10 hidden fixed w-28 left-8 h-dvh md:flex flex-col
+        items-center justify-center text-snowwhite
+        text-sm md:text-2xl"
+    >
+        <ul class="space-y-5">
+            <li class="bg-justdark p-2">Buttons</li>
+            <li class="bg-justdark p-2">Art</li>
+            <li class="bg-justdark p-2">Links</li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section id="Hero" class="relative hero">
+        <!-- Background Image -->
+        <!-- This Covers the entire hero section to the background -->
+        <!-- The rest of the elements will be put with "relative"  -->
+        <Image
+            src={WebsiteDrawingWIP}
+            alt="Background"
+            width={1920}
+            format="webp"
+            class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none select-none"
+            draggable="false"
+        />
+
+        <!-- Greet dialog with some social media links -->
+        <div class="relative box m-12">
+            <h1 class="md:text-7xl font-bold uppercase">SimplyEr1c</h1>
+            <p class="md:text-3xl font-medium">
+                A bit of everything's Illustrator.
+            </p>
+            <ul class="flex flex-row mt-6 space-x-5 text-4xl">
+                <li>
+                    <a href="" class="">
+                        <i class="ti ti-brand-bluesky"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="">
+                        <i class="ti ti-brand-mastodon"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="">
+                        <i class="ti ti-brand-twitch"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="">
+                        <i class="ti ti-brand-kick"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Art Gallery and brief description  -->
+    <section
+        id="art"
+        class="min-h-dvh p-5 flex flex-col items-center justify-center"
+    >
+        <h1 class="text-7xl font-bold p-2 m-5 w-fit bg-coolblue">
+            Another text.
+        </h1>
+        <p class="md:w-8/12 mb-5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit,
+            praesentium culpa officia eligendi optio vel corrupti nostrum quidem
+            totam eaque suscipit, aliquam neque. Dignissimos minus fugit
+            voluptatum, hic eaque veritatis.
+        </p>
+
+        <!-- TODO: Find a way to make a Masonry Gallery with just Tailwind classes -->
+        <div class="grid md:grid-cols-3 mx-15 gap-5">
+            <p class="bg-coolblue w-60 h-60"></p>
+            <p class="bg-coolblue w-60 h-60"></p>
+            <p class="bg-coolblue w-60 h-60"></p>
+            <p class="bg-coolblue w-60 h-60"></p>
+            <p class="bg-coolblue w-60 h-60"></p>
+            <p class="bg-coolblue w-60 h-60"></p>
+        </div>
+    </section>
+
+    <!-- Links  -->
+    <section
+        id="links"
+        class="min-h-dvh bg-coolblue p-8 flex flex-col items-center"
+    >
+        <p class="text-center text-snowwhite font-bold text-7xl mb-8">
+            Zelda's
+        </p>
+
+        <!-- Is just a simple grid. -->
+        <!-- The 1.0 Branch is a Grid with various flex-col organized in categories like
+        Social Media, Contact, Art, And Web3.
+        This time I want a more simpler approach. -->
+        <div class="grid md:grid-cols-4 w-4xl gap-3">
+            <div class="col-span-3 text-center bg-snowwhite p-8">YOU LONG</div>
+            <div class="bg-snowwhite p-8 text-center">Bsky *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Mastodon *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Twitter/X *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Tumblr *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Instagram *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Twitch *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Kick *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Cara *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Etc *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Example *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Boom *-*</div>
+            <div class="bg-snowwhite p-8 text-center">Headshot *-*</div>
+        </div>
+    </section>
+</Layout>

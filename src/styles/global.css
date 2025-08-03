@@ -1,18 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-coolblue: #1d5bde;
-  --color-lightblue: #739fff;
-  --color-sweetevil: #f81d22;
-  --color-orangejuice: #f8751d;
-  --color-neoncyan: #3abff8;
-  --color-futureviolet: #7a1dde;
-  --color-snowwhite: #f0f2f5;
-  --color-justdark: #101010;
+    --color-coolblue: #1d5bde;
+    --color-lightblue: #739fff;
+    --color-sweetevil: #f81d22;
+    --color-orangejuice: #f8751d;
+    --color-neoncyan: #3abff8;
+    --color-futureviolet: #7a1dde;
+    --color-snowwhite: #f0f2f5;
+    --color-justdark: #101010;
 }
 @layer components {
-  body {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-  }
+    body {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        @apply text-justdark;
+    }
+
+    .hero {
+        @apply bg-coolblue h-dvh space-y-12 flex flex-col items-end justify-around;
+    }
+    .box {
+        @apply bg-justdark text-snowwhite p-6 space-y-2;
+    }
 }
