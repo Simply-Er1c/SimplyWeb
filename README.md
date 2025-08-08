@@ -1,1 +1,1 @@
-## [This branch is made to remake the website with another layout. Without copilot's assintance.]
+Hello! I am SimplyEr1c. A self-taught illustrator who enjoys learning a little bit of everything. I have knowledge in drawing, graphic design, basic video editing, motion graphics, vectors, and 3D modeling of environments and objects (soon to learn 3D characters).

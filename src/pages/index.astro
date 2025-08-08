@@ -3,25 +3,11 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import { Image } from "astro:assets";
-import WebsiteDrawingWIP from "../assets/WebsiteDrawingWIP.webp";
+import WebsiteDrawingWIP from "../assets/WebsiteDrawing_001.webp";
+import Logo from "../assets/Logo.astro";
 ---
 
-
 <Layout>
-    <!-- Sticky Navbar -->
-    <!-- TODO: Make this navbar with icons based on the sections  -->
-    <nav
-        class="z-10 hidden fixed w-28 left-8 h-dvh md:flex flex-col
-        items-center justify-center text-snowwhite
-        text-sm md:text-2xl"
-    >
-        <ul class="space-y-5">
-            <li class="bg-justdark p-2">Buttons</li>
-            <li class="bg-justdark p-2">Art</li>
-            <li class="bg-justdark p-2">Links</li>
-        </ul>
-    </nav>
-
     <!-- Hero -->
     <section id="Hero" class="relative hero">
         <!-- Background Image -->
@@ -32,34 +18,54 @@ import WebsiteDrawingWIP from "../assets/WebsiteDrawingWIP.webp";
             alt="Background"
             width={1920}
             format="webp"
-            class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none select-none"
+            class="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none select-none"
             draggable="false"
         />
 
+        <div class="relative">
+            <!-- Logo -->
+            <Logo width="155" />
+        </div>
         <!-- Greet dialog with some social media links -->
-        <div class="relative box m-12">
-            <h1 class="md:text-7xl font-bold uppercase">SimplyEr1c</h1>
+        <div class="relative box">
+            <h1 class="text-4xl md:text-6xl font-bold uppercase">SimplyEr1c</h1>
             <p class="md:text-3xl font-medium">
                 A bit of everything's Illustrator.
             </p>
-            <ul class="flex flex-row mt-6 space-x-5 text-4xl">
+            <ul class="flex flex-row mt-3 gap-x-5 text-4xl justify-start">
                 <li>
-                    <a href="" class="">
+                    <a
+                        href="https://bsky.app/profile/simplyer1c.art"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <i class="ti ti-brand-bluesky"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="">
+                    <a
+                        href="https://mas.to/@SimplyEr1c"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <i class="ti ti-brand-mastodon"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="">
+                    <a
+                        href="https://www.twitch.tv/simplyer1c"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <i class="ti ti-brand-twitch"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="">
+                    <a
+                        href="https://kick.com/simplyer1c"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <i class="ti ti-brand-kick"></i>
                     </a>
                 </li>
@@ -99,27 +105,87 @@ import WebsiteDrawingWIP from "../assets/WebsiteDrawingWIP.webp";
         class="min-h-dvh bg-coolblue p-8 flex flex-col items-center"
     >
         <p class="text-center text-snowwhite font-bold text-7xl mb-8">
-            Zelda's
+            Contact
         </p>
 
         <!-- Is just a simple grid. -->
         <!-- The 1.0 Branch is a Grid with various flex-col organized in categories like
         Social Media, Contact, Art, And Web3.
         This time I want a more simpler approach. -->
-        <div class="grid md:grid-cols-4 w-4xl gap-3">
-            <div class="col-span-3 text-center bg-snowwhite p-8">YOU LONG</div>
-            <div class="bg-snowwhite p-8 text-center">Bsky *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Mastodon *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Twitter/X *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Tumblr *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Instagram *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Twitch *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Kick *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Cara *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Etc *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Example *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Boom *-*</div>
-            <div class="bg-snowwhite p-8 text-center">Headshot *-*</div>
+        <div class="grid md:grid-cols-3 w-4xl gap-6 m-3">
+            <a
+                href="https://bsky.app/profile/simplyer1c.art"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contactButton"
+            >
+                <i class="ti ti-brand-bluesky"></i>
+                Bluesky
+            </a>
+            <a
+                href="https://mas.to/@SimplyEr1c"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contactButton"
+            >
+                <i class="ti ti-brand-mastodon"></i>
+                Mastodon
+            </a>
+            <a
+                href="https://lemmy.world/u/SimplyEr1c"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contactButton"
+            >
+                <i class="ti ti-brand-bluesky"></i>
+                Lemmy
+            </a><a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contactButton"
+            >
+                <i class="ti ti-brand-bluesky"></i>
+                Twitch
+            </a><a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contactButton"
+            >
+                <i class="ti ti-brand-bluesky"></i>
+                Kick
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 w-4xl gap-3 bg-red-400 m-3">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="ti ti-brand-bluesky"></i>
+                Cara.app
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="ti ti-brand-bluesky"></i>
+                Pixiv
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="ti ti-brand-bluesky"></i>
+                Vgen
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 w-4xl gap-3 bg-red-400 m-3">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="ti ti-brand-bluesky"></i>
+                Mallow
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="ti ti-brand-bluesky"></i>
+                Objkt
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="ti ti-brand-bluesky"></i>
+                Foundation
+            </a>
         </div>
     </section>
 </Layout>
