@@ -5,13 +5,18 @@ import "../styles/global.css";
 import { Image } from "astro:assets";
 import WebsiteDrawingWIP from "../assets/WebsiteDrawing_001.webp";
 import Logo from "../assets/Logo.astro";
+// Icons (Not included in tabler)
+import Pixiv from "../assets/icons/Pixiv.astro";
+import Mallow from "../assets/icons/Mallow.astro";
+import Vgen from "../assets/icons/Vgen.astro";
+import Cara from "../assets/icons/Cara.astro";
 ---
 
 <Layout>
     <!-- Hero -->
     <section id="Hero" class="relative hero">
         <!-- Background Image -->
-        <!-- This Covers the entire hero section to the background -->
+        <!-- This Covers the entire  hero section to the background -->
         <!-- The rest of the elements will be put with "relative"  -->
         <Image
             src={WebsiteDrawingWIP}
@@ -88,14 +93,34 @@ import Logo from "../assets/Logo.astro";
             voluptatum, hic eaque veritatis.
         </p>
 
-        <!-- TODO: Find a way to make a Masonry Gallery with just Tailwind classes -->
         <div class="grid md:grid-cols-3 mx-15 gap-5">
-            <p class="bg-coolblue w-60 h-60"></p>
-            <p class="bg-coolblue w-60 h-60"></p>
-            <p class="bg-coolblue w-60 h-60"></p>
-            <p class="bg-coolblue w-60 h-60"></p>
-            <p class="bg-coolblue w-60 h-60"></p>
-            <p class="bg-coolblue w-60 h-60"></p>
+            <div class="break-inside-avoid mb-6">
+                <Image
+                    src="https://cdn.cara.app/production/posts/fa03dd4b-0e9e-4b4e-93cf-8e4340dc36cd/simplyer1c-SOSL-_oNhHbd35LUkBwjy-DonutFinal.png"
+                    alt="Image"
+                    height="400"
+                    width="300"
+                    class="rounded-lg shadow-lg w-full h-auto"
+                />
+            </div>
+            <div class="break-inside-avoid mb-6">
+                <Image
+                    src="https://cdn.cara.app/production/posts/1fe13c44-dc4f-47dd-9176-b42d4117215e/simplyer1c-5BVOamOlQYBklKpSU25oN-S4S.png"
+                    alt="Image"
+                    height="300"
+                    width="300"
+                    class="rounded-lg shadow-lg w-full h-auto"
+                />
+            </div>
+            <div class="break-inside-avoid mb-6">
+                <Image
+                    src="https://cdn.cara.app/production/posts/e53d41bc-f77e-4e78-8e92-915e8cf90f47/simplyer1c-JZy4tZpXEzE1lJMym5TF0-Jack.png"
+                    alt="Image"
+                    height="300"
+                    width="300"
+                    class="rounded-lg shadow-lg w-full h-auto"
+                />
+            </div>
         </div>
     </section>
 
@@ -107,14 +132,16 @@ import Logo from "../assets/Logo.astro";
         <p class="text-center text-snowwhite font-bold text-7xl mb-8">
             Contact
         </p>
-
-        <!-- Is just a simple grid. -->
-        <!-- The 1.0 Branch is a Grid with various flex-col organized in categories like
-        Social Media, Contact, Art, And Web3.
-        This time I want a more simpler approach. -->
-        <div class="grid md:grid-cols-3 w-4xl gap-6 m-3">
+        <div
+            class="flex flex-wrap w-1xl md:w-4xl gap-6 m-3 items-center justify-center"
+        >
+            <a href="mailto:SimplyEr1c@protonmail.com" class="contactButton">
+                <i class="ti ti-mail"></i>
+                Email
+            </a>
             <a
                 href="https://bsky.app/profile/simplyer1c.art"
+                aria-label="Bluesky"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="contactButton"
@@ -124,6 +151,7 @@ import Logo from "../assets/Logo.astro";
             </a>
             <a
                 href="https://mas.to/@SimplyEr1c"
+                aria-label="Mastodon"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="contactButton"
@@ -133,59 +161,99 @@ import Logo from "../assets/Logo.astro";
             </a>
             <a
                 href="https://lemmy.world/u/SimplyEr1c"
+                aria-label="Lemmy"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="contactButton"
             >
-                <i class="ti ti-brand-bluesky"></i>
+                <i class="ti ti-world"></i>
                 Lemmy
             </a><a
-                href=""
+                href="https://www.twitch.tv/simplyer1c"
+                aria-label="Twitch"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="contactButton"
             >
-                <i class="ti ti-brand-bluesky"></i>
+                <i class="ti ti-brand-twitch"></i>
                 Twitch
             </a><a
+                href="https://kick.com/SimplyEr1c"
+                aria-label="Kick"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contactButton"
+            >
+                <i class="ti ti-brand-kick"></i>
+                Kick
+            </a>
+            <!-- Art -->
+            <a
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 class="contactButton"
             >
-                <i class="ti ti-brand-bluesky"></i>
-                Kick
-            </a>
-        </div>
-
-        <div class="grid md:grid-cols-3 w-4xl gap-3 bg-red-400 m-3">
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="ti ti-brand-bluesky"></i>
+                <Cara />
                 Cara.app
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="ti ti-brand-bluesky"></i>
+            <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contactButton"
+            >
+                <Pixiv />
                 Pixiv
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="ti ti-brand-bluesky"></i>
+            <a
+                href="https://vgen.co/SimplyEr1c/characters"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contactButton"
+            >
+                <Vgen />
                 Vgen
             </a>
-        </div>
 
-        <div class="grid md:grid-cols-3 w-4xl gap-3 bg-red-400 m-3">
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="ti ti-brand-bluesky"></i>
+            <!-- Web3 -->
+            <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contactButton"
+            >
+                <Mallow />
                 Mallow
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="ti ti-brand-bluesky"></i>
+            <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contactButton"
+            >
                 Objkt
-            </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="ti ti-brand-bluesky"></i>
-                Foundation
             </a>
         </div>
     </section>
+    <footer class="m-auto w-fit h-fit py-8 justify-center">
+        <p>
+            Made with <i class="ti ti-brand-tailwind"></i> Tailwind, <i
+                class="ti ti-brand-astro"></i> Astro and <i class="ti ti-coffee"
+            ></i>
+            <i class="ti ti-heart"></i>
+            <i class="ti ti-headphones"></i>
+            <i class="ti ti-music"></i>
+            by
+            <a
+                href="https://github.com/Simply-Er1c"
+                aria-label="GitHub"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="font-medium"
+            >
+                SimplyEr1c <i class="ti ti-brand-github"></i>
+            </a>
+        </p>
+    </footer>
 </Layout>
