@@ -13,7 +13,7 @@
     body {
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
-        @apply text-oceandark;
+        @apply bg-snowwhite text-oceandark;
     }
 
     .bgGrid {
