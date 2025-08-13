@@ -13,7 +13,7 @@
     body {
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
-        @apply bg-snowwhite text-oceandark;
+        @apply bg-snowwhite dark:bg-oceandark text-oceandark dark:text-snowwhite;
     }
 
     .bgGrid {
@@ -21,13 +21,13 @@
     }
 
     .hero {
-        @apply bg-coolblue h-dvh flex flex-col md:flex-row gap-y-18 md:gap-y-0 items-center justify-center md:justify-between md:px-24;
+        @apply bg-coolblue dark:bg-oceandark h-dvh flex flex-col md:flex-row gap-y-18 md:gap-y-0 items-center justify-center md:justify-between md:px-24;
     }
     .box {
-        @apply bg-oceandark text-snowwhite text-center md:text-left p-6;
+        @apply bg-oceandark  dark:drop-shadow-2xl text-snowwhite text-center md:text-left p-6;
     }
 
     .contactButton {
-        @apply bg-oceandark text-snowwhite text-center gap-x-1 p-5 text-2xl md:text-4xl hover:scale-110  transition-all  font-semibold rounded-2xl;
+        @apply bg-oceandark dark:bg-coolblue text-snowwhite text-center gap-x-1 p-5 text-2xl md:text-4xl hover:scale-110  transition-all  font-semibold rounded-2xl;
     }
 }

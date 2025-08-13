@@ -1,16 +1,14 @@
 ---
-// Import necessary components/layouts if needed
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import { Image } from "astro:assets";
 import WebsiteDrawingWIP from "../assets/WebsiteDrawing.webp";
 import Logo from "../assets/Logo.astro";
-// Icons (Not included in tabler)
+// Icons not included in tabler
 import Pixiv from "../assets/icons/Pixiv.astro";
 import Mallow from "../assets/icons/Mallow.astro";
 import Vgen from "../assets/icons/Vgen.astro";
 import Cara from "../assets/icons/Cara.astro";
-import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 // Links of my social media accounts.
 const socialLinks = [
@@ -28,6 +26,14 @@ const socialLinks = [
         icon: "ti ti-brand-mastodon",
         component: null,
         showInHero: true,
+        showInContact: true,
+    },
+    {
+        name: "Cara.app",
+        url: "https://cara.app/simplyer1c",
+        icon: null,
+        component: Cara,
+        showInHero: false,
         showInContact: true,
     },
     {
@@ -51,7 +57,7 @@ const socialLinks = [
         url: "mailto:SimplyEr1c@protonmail.com",
         icon: "ti ti-mail",
         component: null,
-        showInHero: true,
+        showInHero: false,
         showInContact: true,
     },
     {
@@ -62,17 +68,10 @@ const socialLinks = [
         showInHero: false,
         showInContact: true,
     },
-    {
-        name: "Cara.app",
-        url: "",
-        icon: null,
-        component: Cara,
-        showInHero: false,
-        showInContact: true,
-    },
+
     {
         name: "Pixiv",
-        url: "",
+        url: "https://www.pixiv.net/en/users/100654117",
         icon: null,
         component: Pixiv,
         showInHero: false,
@@ -80,7 +79,7 @@ const socialLinks = [
     },
     {
         name: "Vgen",
-        url: "https://vgen.co/SimplyEr1c/characters",
+        url: "https://vgen.co/SimplyEr1c/",
         icon: null,
         component: Vgen,
         showInHero: false,
@@ -88,22 +87,15 @@ const socialLinks = [
     },
     {
         name: "Mallow",
-        url: "",
+        url: "https://www.mallow.art/u/simplyer1c",
         icon: null,
         component: Mallow,
         showInHero: false,
         showInContact: true,
     },
-    {
-        name: "Objkt",
-        url: "",
-        icon: null,
-        component: null,
-        showInHero: false,
-        showInContact: true,
-    },
 ];
 
+// Filter functions for Hero and Contact sections
 const getHeroLinks = () => socialLinks.filter((link) => link.showInHero);
 const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
 ---
@@ -119,11 +111,12 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
             alt="Background"
             width={1920}
             format="webp"
-            class="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none select-none"
+            loading="eager"
+            class="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
             draggable="false"
         />
 
-        <div class="relative">
+        <div class="relative drop-shadow-2xl drop-shadow-oceandark">
             <!-- Logo -->
             <Logo width="155" />
         </div>
@@ -133,7 +126,9 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
             <p class="md:text-3xl font-medium">
                 A bit of everything's Illustrator.
             </p>
-            <ul class="flex flex-row mt-3 gap-x-5 text-4xl justify-start">
+            <ul
+                class="flex flex-row mt-3 gap-x-5 text-4xl justify-center md:justify-start"
+            >
                 {
                     getHeroLinks().map((link) => (
                         <li>
@@ -159,41 +154,63 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
     <!-- Art Gallery and brief description  -->
     <section
         id="art"
-        class="min-h-dvh p-5 flex flex-col items-center justify-center"
+        class="min-h-dvh py-14 flex flex-col items-center justify-center"
     >
         <p class="w-8/12 mb-5">
-            Hello! I'm Er1c, a self-taught illustrator making art variety from
-            raster, vector graphics and 3D modeling. I learned through online
-            course platforms such as Domestika and Udemy and Youtube. I like to
-            create a bit of everything such as Illustrations, Characters,
-            Natural Landscapes and graphic design.
+            Hello! I'm Er1c, a self-taught illustrator making art from raster,
+            vector graphics and 3D modeling. I learned through online course
+            platforms such as Domestika and Udemy and Youtube. I like to create
+            a bit of everything such as Illustrations, Characters, Natural
+            Landscapes and graphic design.
         </p>
 
         <div class="grid md:grid-cols-3 mx-15 gap-5">
-            <div class="break-inside-avoid mb-6">
+            <div class="break-inside-avoid">
                 <Image
                     src="https://cdn.cara.app/production/posts/fa03dd4b-0e9e-4b4e-93cf-8e4340dc36cd/simplyer1c-SOSL-_oNhHbd35LUkBwjy-DonutFinal.png"
-                    alt="Image"
-                    height="400"
-                    width="300"
-                    loading="lazy"
-                    class="rounded-lg shadow-lg w-full h-auto"
-                />
-            </div>
-            <div class="break-inside-avoid mb-6">
-                <Image
-                    src="https://cdn.cara.app/production/posts/1fe13c44-dc4f-47dd-9176-b42d4117215e/simplyer1c-5BVOamOlQYBklKpSU25oN-S4S.png"
-                    alt="Image"
+                    alt="Donut"
                     height="300"
                     width="300"
                     loading="lazy"
                     class="rounded-lg shadow-lg w-full h-auto"
                 />
             </div>
-            <div class="break-inside-avoid mb-6">
+            <div class="break-inside-avoid">
+                <Image
+                    src="https://cdn.cara.app/production/posts/1fe13c44-dc4f-47dd-9176-b42d4117215e/simplyer1c-5BVOamOlQYBklKpSU25oN-S4S.png"
+                    alt="Sad Machine"
+                    height="300"
+                    width="300"
+                    loading="lazy"
+                    class="rounded-lg shadow-lg w-full h-auto"
+                />
+            </div>
+            <div class="break-inside-avoid">
                 <Image
                     src="https://cdn.cara.app/production/posts/e53d41bc-f77e-4e78-8e92-915e8cf90f47/simplyer1c-JZy4tZpXEzE1lJMym5TF0-Jack.png"
-                    alt="Image"
+                    alt="Jack Sculpt"
+                    height="300"
+                    width="300"
+                    loading="lazy"
+                    class="rounded-lg shadow-lg w-full h-auto"
+                />
+            </div>
+
+            <div class="break-inside-avoid">
+                <Image
+                    src="https://cdn.cara.app/production/posts/af94455d-7f60-4c6f-8de3-4d604fcb7316/simplyer1c-l8U2T1AaQREUjaaxvaRyx-SteamDeliveryGirl.png"
+                    alt="Steam Delivery Girl Fanart"
+                    height="300"
+                    width="300"
+                    loading="lazy"
+                    class="rounded-lg shadow-lg w-full h-auto"
+                />
+            </div>
+
+            <div class="break-inside-avoid col-span-2">
+                <Image
+                    src="https://cdn.cara.app/production/posts/63359974-b929-4b64-bfc2-a933b18be6b9/simplyer1c-ICbnsko2solzM08WFk_-K-Main2.jpg"
+                    alt="3D character course project"
                     height="300"
                     width="300"
                     loading="lazy"
@@ -206,10 +223,10 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
     <!-- Links  -->
     <section
         id="links"
-        class="min-h-dvh bg-coolblue p-8 flex flex-col items-center"
+        class="min-h-dvh bg-coolblue dark:bg-oceandark p-8 flex flex-col items-center justify-center"
     >
         <p class="text-center text-snowwhite font-bold text-7xl mb-8">
-            Contact
+            Find me on
         </p>
         <div
             class="flex flex-wrap w-1xl md:w-4xl gap-6 m-3 items-center justify-center"

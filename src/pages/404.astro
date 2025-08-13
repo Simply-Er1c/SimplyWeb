@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import er1c404 from "../assets/er1c404.webp";
+---
+
+<Layout>
+    <main
+        class="dark bg-oceandark text-snowwhite h-full w-full flex flex-col items-center justify-center gap-4"
+    >
+        <div class="inline-flex flex-row items-center justify-center">
+            <b class="text-8xl md:text-[200px] font-black leading-none">4</b>
+            <Image
+                loading="eager"
+                src={er1c404}
+                alt="er1c404"
+                height={300}
+                width={300}
+                class="w-24 h-24 md:w-[200px] md:h-[200px]"
+            />
+            <b class="text-8xl md:text-[200px] font-black leading-none">4</b>
+        </div>
+        <h1 class="md:text-4xl font-bold">Nothing to see here.</h1>
+        <a href="/" class="linkbtn p-4 rounded-full bg-coolblue"
+            >Return to the homepage</a
+        >
+    </main>
+</Layout>
