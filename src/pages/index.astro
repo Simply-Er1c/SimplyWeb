@@ -3,13 +3,109 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import { Image } from "astro:assets";
-import WebsiteDrawingWIP from "../assets/WebsiteDrawing_001.webp";
+import WebsiteDrawingWIP from "../assets/WebsiteDrawing.webp";
 import Logo from "../assets/Logo.astro";
 // Icons (Not included in tabler)
 import Pixiv from "../assets/icons/Pixiv.astro";
 import Mallow from "../assets/icons/Mallow.astro";
 import Vgen from "../assets/icons/Vgen.astro";
 import Cara from "../assets/icons/Cara.astro";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
+
+// Links of my social media accounts.
+const socialLinks = [
+    {
+        name: "Bluesky",
+        url: "https://bsky.app/profile/simplyer1c.art",
+        icon: "ti ti-brand-bluesky",
+        component: null,
+        showInHero: true,
+        showInContact: true,
+    },
+    {
+        name: "Mastodon",
+        url: "https://mas.to/@SimplyEr1c",
+        icon: "ti ti-brand-mastodon",
+        component: null,
+        showInHero: true,
+        showInContact: true,
+    },
+    {
+        name: "Twitch",
+        url: "https://www.twitch.tv/simplyer1c",
+        icon: "ti ti-brand-twitch",
+        component: null,
+        showInHero: true,
+        showInContact: true,
+    },
+    {
+        name: "Kick",
+        url: "https://kick.com/simplyer1c",
+        icon: "ti ti-brand-kick",
+        component: null,
+        showInHero: true,
+        showInContact: true,
+    },
+    {
+        name: "Email",
+        url: "mailto:SimplyEr1c@protonmail.com",
+        icon: "ti ti-mail",
+        component: null,
+        showInHero: true,
+        showInContact: true,
+    },
+    {
+        name: "Lemmy",
+        url: "https://lemmy.world/u/SimplyEr1c",
+        icon: "ti ti-world",
+        component: null,
+        showInHero: false,
+        showInContact: true,
+    },
+    {
+        name: "Cara.app",
+        url: "",
+        icon: null,
+        component: Cara,
+        showInHero: false,
+        showInContact: true,
+    },
+    {
+        name: "Pixiv",
+        url: "",
+        icon: null,
+        component: Pixiv,
+        showInHero: false,
+        showInContact: true,
+    },
+    {
+        name: "Vgen",
+        url: "https://vgen.co/SimplyEr1c/characters",
+        icon: null,
+        component: Vgen,
+        showInHero: false,
+        showInContact: true,
+    },
+    {
+        name: "Mallow",
+        url: "",
+        icon: null,
+        component: Mallow,
+        showInHero: false,
+        showInContact: true,
+    },
+    {
+        name: "Objkt",
+        url: "",
+        icon: null,
+        component: null,
+        showInHero: false,
+        showInContact: true,
+    },
+];
+
+const getHeroLinks = () => socialLinks.filter((link) => link.showInHero);
+const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
 ---
 
 <Layout>
@@ -38,42 +134,24 @@ import Cara from "../assets/icons/Cara.astro";
                 A bit of everything's Illustrator.
             </p>
             <ul class="flex flex-row mt-3 gap-x-5 text-4xl justify-start">
-                <li>
-                    <a
-                        href="https://bsky.app/profile/simplyer1c.art"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <i class="ti ti-brand-bluesky"></i>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://mas.to/@SimplyEr1c"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <i class="ti ti-brand-mastodon"></i>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://www.twitch.tv/simplyer1c"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <i class="ti ti-brand-twitch"></i>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://kick.com/simplyer1c"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <i class="ti ti-brand-kick"></i>
-                    </a>
-                </li>
+                {
+                    getHeroLinks().map((link) => (
+                        <li>
+                            <a
+                                href={link.url}
+                                target="blank"
+                                rel="noopener noreferrer"
+                                aria-label={link.name}
+                            >
+                                {link.component ? (
+                                    <link.component />
+                                ) : link.icon ? (
+                                    <i class={link.icon} />
+                                ) : null}
+                            </a>
+                        </li>
+                    ))
+                }
             </ul>
         </div>
     </section>
@@ -83,14 +161,12 @@ import Cara from "../assets/icons/Cara.astro";
         id="art"
         class="min-h-dvh p-5 flex flex-col items-center justify-center"
     >
-        <h1 class="text-7xl font-bold p-2 m-5 w-fit bg-coolblue">
-            Another text.
-        </h1>
-        <p class="md:w-8/12 mb-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit,
-            praesentium culpa officia eligendi optio vel corrupti nostrum quidem
-            totam eaque suscipit, aliquam neque. Dignissimos minus fugit
-            voluptatum, hic eaque veritatis.
+        <p class="w-8/12 mb-5">
+            Hello! I'm Er1c, a self-taught illustrator making art variety from
+            raster, vector graphics and 3D modeling. I learned through online
+            course platforms such as Domestika and Udemy and Youtube. I like to
+            create a bit of everything such as Illustrations, Characters,
+            Natural Landscapes and graphic design.
         </p>
 
         <div class="grid md:grid-cols-3 mx-15 gap-5">
@@ -100,6 +176,7 @@ import Cara from "../assets/icons/Cara.astro";
                     alt="Image"
                     height="400"
                     width="300"
+                    loading="lazy"
                     class="rounded-lg shadow-lg w-full h-auto"
                 />
             </div>
@@ -109,6 +186,7 @@ import Cara from "../assets/icons/Cara.astro";
                     alt="Image"
                     height="300"
                     width="300"
+                    loading="lazy"
                     class="rounded-lg shadow-lg w-full h-auto"
                 />
             </div>
@@ -118,6 +196,7 @@ import Cara from "../assets/icons/Cara.astro";
                     alt="Image"
                     height="300"
                     width="300"
+                    loading="lazy"
                     class="rounded-lg shadow-lg w-full h-auto"
                 />
             </div>
@@ -135,108 +214,27 @@ import Cara from "../assets/icons/Cara.astro";
         <div
             class="flex flex-wrap w-1xl md:w-4xl gap-6 m-3 items-center justify-center"
         >
-            <a href="mailto:SimplyEr1c@protonmail.com" class="contactButton">
-                <i class="ti ti-mail"></i>
-                Email
-            </a>
-            <a
-                href="https://bsky.app/profile/simplyer1c.art"
-                aria-label="Bluesky"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contactButton"
-            >
-                <i class="ti ti-brand-bluesky"></i>
-                Bluesky
-            </a>
-            <a
-                href="https://mas.to/@SimplyEr1c"
-                aria-label="Mastodon"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contactButton"
-            >
-                <i class="ti ti-brand-mastodon"></i>
-                Mastodon
-            </a>
-            <a
-                href="https://lemmy.world/u/SimplyEr1c"
-                aria-label="Lemmy"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contactButton"
-            >
-                <i class="ti ti-world"></i>
-                Lemmy
-            </a><a
-                href="https://www.twitch.tv/simplyer1c"
-                aria-label="Twitch"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contactButton"
-            >
-                <i class="ti ti-brand-twitch"></i>
-                Twitch
-            </a><a
-                href="https://kick.com/SimplyEr1c"
-                aria-label="Kick"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contactButton"
-            >
-                <i class="ti ti-brand-kick"></i>
-                Kick
-            </a>
-            <!-- Art -->
-            <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contactButton"
-            >
-                <Cara />
-                Cara.app
-            </a>
-            <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contactButton"
-            >
-                <Pixiv />
-                Pixiv
-            </a>
-            <a
-                href="https://vgen.co/SimplyEr1c/characters"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contactButton"
-            >
-                <Vgen />
-                Vgen
-            </a>
-
-            <!-- Web3 -->
-            <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contactButton"
-            >
-                <Mallow />
-                Mallow
-            </a>
-            <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contactButton"
-            >
-                Objkt
-            </a>
+            {
+                getContactLinks().map((link) => (
+                    <a
+                        href={link.url}
+                        class="contactButton"
+                        aria-label={link.name}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {link.component ? (
+                            <link.component />
+                        ) : link.icon ? (
+                            <i class={link.icon} />
+                        ) : null}
+                        {link.name}
+                    </a>
+                ))
+            }
         </div>
     </section>
-    <footer class="m-auto w-fit h-fit py-8 justify-center">
+    <footer class="m-auto w-fit h-fit py-4 justify-center bg-ocean">
         <p>
             Made with <i class="ti ti-brand-tailwind"></i> Tailwind, <i
                 class="ti ti-brand-astro"></i> Astro and <i class="ti ti-coffee"
