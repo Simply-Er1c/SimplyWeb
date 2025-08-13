@@ -1,1 +1,4 @@
-Hello! I am SimplyEr1c. A self-taught illustrator who enjoys learning a little bit of everything. I have knowledge in drawing, graphic design, basic video editing, motion graphics, vectors, and 3D modeling of environments and objects (soon to learn 3D characters).
+
+![Screenshot](./src/assets/Screenshot.png)
+
+Hello! I'm SimplyEr1c. This is my personal portfolio website. Made with Astro and Tailwind CSS.
