@@ -4,7 +4,7 @@ import "../styles/global.css";
 import { Image } from "astro:assets";
 import WebsiteDrawingWIP from "../assets/WebsiteDrawing.webp";
 import Logo from "../assets/Logo.astro";
-// Icons not included in tabler
+// Icons not included in tabler.
 import Pixiv from "../assets/icons/Pixiv.astro";
 import Mallow from "../assets/icons/Mallow.astro";
 import Vgen from "../assets/icons/Vgen.astro";
@@ -95,6 +95,33 @@ const socialLinks = [
     },
 ];
 
+// Pictures
+// This artworks are hosted on Cara. I want only a few selection. There's no need to auto-scrape and put all here.
+const artworkPictures = [
+    {
+        src: "https://cdn.cara.app/production/posts/fa03dd4b-0e9e-4b4e-93cf-8e4340dc36cd/simplyer1c-SOSL-_oNhHbd35LUkBwjy-DonutFinal.png",
+        alt: "Donut",
+    },
+
+    {
+        src: "https://cdn.cara.app/production/posts/1fe13c44-dc4f-47dd-9176-b42d4117215e/simplyer1c-5BVOamOlQYBklKpSU25oN-S4S.png",
+        alt: "Sad Machine",
+    },
+
+    {
+        src: "https://cdn.cara.app/production/posts/e53d41bc-f77e-4e78-8e92-915e8cf90f47/simplyer1c-JZy4tZpXEzE1lJMym5TF0-Jack.png",
+        alt: "Jack Sculpt",
+    },
+    {
+        src: "https://cdn.cara.app/production/posts/af94455d-7f60-4c6f-8de3-4d604fcb7316/simplyer1c-l8U2T1AaQREUjaaxvaRyx-SteamDeliveryGirl.png",
+        alt: "Steam Delivery Girl Fanart",
+    },
+    {
+        src: "https://cdn.cara.app/production/posts/63359974-b929-4b64-bfc2-a933b18be6b9/simplyer1c-ICbnsko2solzM08WFk_-K-Main2.jpg",
+        alt: "3D character course project",
+    },
+];
+
 // Filter functions for Hero and Contact sections
 const getHeroLinks = () => socialLinks.filter((link) => link.showInHero);
 const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
@@ -127,8 +154,15 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
                 A bit of everything's Illustrator.
             </p>
             <ul
-                class="flex flex-row mt-3 gap-x-5 text-4xl justify-center md:justify-start"
+                class="flex flex-row mt-3 gap-x-5 text-4xl items-center justify-center md:justify-start"
             >
+                <a
+                    href="https://cara.app/simplyer1c"
+                    aria-label="Portfolio"
+                    class="contactButton text-xl p-3"
+                >
+                    Portfolio
+                </a>
                 {
                     getHeroLinks().map((link) => (
                         <li>
@@ -165,58 +199,20 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
         </p>
 
         <div class="grid md:grid-cols-3 mx-15 gap-5">
-            <div class="break-inside-avoid">
-                <Image
-                    src="https://cdn.cara.app/production/posts/fa03dd4b-0e9e-4b4e-93cf-8e4340dc36cd/simplyer1c-SOSL-_oNhHbd35LUkBwjy-DonutFinal.png"
-                    alt="Donut"
-                    height="300"
-                    width="300"
-                    loading="lazy"
-                    class="rounded-4xl shadow-lg w-full h-auto"
-                />
-            </div>
-            <div class="break-inside-avoid">
-                <Image
-                    src="https://cdn.cara.app/production/posts/1fe13c44-dc4f-47dd-9176-b42d4117215e/simplyer1c-5BVOamOlQYBklKpSU25oN-S4S.png"
-                    alt="Sad Machine"
-                    height="300"
-                    width="300"
-                    loading="lazy"
-                    class="rounded-4xl shadow-lg w-full h-auto"
-                />
-            </div>
-            <div class="break-inside-avoid">
-                <Image
-                    src="https://cdn.cara.app/production/posts/e53d41bc-f77e-4e78-8e92-915e8cf90f47/simplyer1c-JZy4tZpXEzE1lJMym5TF0-Jack.png"
-                    alt="Jack Sculpt"
-                    height="300"
-                    width="300"
-                    loading="lazy"
-                    class="rounded-4xl shadow-lg w-full h-auto"
-                />
-            </div>
-
-            <div class="break-inside-avoid">
-                <Image
-                    src="https://cdn.cara.app/production/posts/af94455d-7f60-4c6f-8de3-4d604fcb7316/simplyer1c-l8U2T1AaQREUjaaxvaRyx-SteamDeliveryGirl.png"
-                    alt="Steam Delivery Girl Fanart"
-                    height="300"
-                    width="300"
-                    loading="lazy"
-                    class="rounded-4xl shadow-lg w-full h-auto"
-                />
-            </div>
-
-            <div class="break-inside-avoid col-span-2">
-                <Image
-                    src="https://cdn.cara.app/production/posts/63359974-b929-4b64-bfc2-a933b18be6b9/simplyer1c-ICbnsko2solzM08WFk_-K-Main2.jpg"
-                    alt="3D character course project"
-                    height="300"
-                    width="300"
-                    loading="lazy"
-                    class="rounded-4xl shadow-lg w-full h-auto"
-                />
-            </div>
+            {
+                artworkPictures.map((pic) => (
+                    <div class="break-inside-avoid">
+                        <Image
+                            src={pic.src}
+                            alt={pic.alt}
+                            height="300"
+                            width="300"
+                            loading="lazy"
+                            class="shadow-lg dark:shadow-shadow-none "
+                        />
+                    </div>
+                ))
+            }
         </div>
     </section>
 

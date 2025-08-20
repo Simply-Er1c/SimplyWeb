@@ -24,10 +24,10 @@
         @apply bg-coolblue dark:bg-metaldark h-dvh flex flex-col md:flex-row gap-y-18 md:gap-y-0 items-center justify-center md:justify-between md:px-24;
     }
     .box {
-        @apply bg-metaldark dark:drop-shadow-2xl text-snowwhite text-center md:text-left p-6 rounded-4xl;
+        @apply bg-metaldark dark:drop-shadow-2xl text-snowwhite text-center md:text-left p-6;
     }
 
     .contactButton {
-        @apply bg-metaldark dark:bg-coolblue text-snowwhite text-center gap-x-1 p-5 text-2xl md:text-4xl hover:scale-110  transition-all  font-semibold rounded-4xl;
+        @apply bg-metaldark dark:bg-coolblue text-snowwhite text-center gap-x-1 p-5 text-2xl md:text-4xl hover:scale-110  transition-all  font-semibold;
     }
 }
