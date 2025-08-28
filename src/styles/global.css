@@ -11,7 +11,7 @@
 }
 @layer components {
     body {
-        font-family: "Inter", sans-serif;
+        font-family: "Rubik", sans-serif;
         font-optical-sizing: auto;
         @apply bg-snowwhite dark:bg-metaldark text-metaldark dark:text-snowwhite;
     }
