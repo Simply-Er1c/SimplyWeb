@@ -8,7 +8,6 @@ import Logo from "../assets/Logo.astro";
 import Pixiv from "../assets/icons/Pixiv.astro";
 import Mallow from "../assets/icons/Mallow.astro";
 import Vgen from "../assets/icons/Vgen.astro";
-import Cara from "../assets/icons/Cara.astro";
 
 // Links of my social media accounts.
 const socialLinks = [
@@ -29,13 +28,38 @@ const socialLinks = [
         showInContact: true,
     },
     {
-        name: "Cara.app",
-        url: "https://cara.app/simplyer1c",
-        icon: null,
-        component: Cara,
+        name: "Threads",
+        url: "https://www.threads.com/@simplyer1c",
+        icon: "ti ti-brand-threads",
+        component: null,
         showInHero: false,
         showInContact: true,
     },
+    {
+        name: "Cara",
+        url: "https://cara.app/simplyer1c",
+        icon: null,
+        component: null,
+        showInHero: false,
+        showInContact: true,
+    },
+    {
+        name: "Instagram",
+        url: "https://www.instagram.com/simplyer1c/",
+        icon: "ti ti-brand-instagram",
+        component: null,
+        showInHero: true,
+        showInContact: true,
+    },
+    {
+        name: "Tumblr",
+        url: "https://www.tumblr.com/blog/simplyer1c",
+        icon: "ti ti-brand-tumblr",
+        component: null,
+        showInHero: false,
+        showInContact: true,
+    },
+
     {
         name: "Twitch",
         url: "https://www.twitch.tv/simplyer1c",
@@ -50,6 +74,14 @@ const socialLinks = [
         icon: "ti ti-brand-kick",
         component: null,
         showInHero: true,
+        showInContact: true,
+    },
+    {
+        name: "Youtube",
+        url: "https://www.youtube.com/channel/UCfGj1FK7R1xkSTzWYhw5iyg",
+        icon: "ti ti-brand-youtube",
+        component: null,
+        showInHero: false,
         showInContact: true,
     },
     {
@@ -74,6 +106,15 @@ const socialLinks = [
         url: "https://www.pixiv.net/en/users/100654117",
         icon: null,
         component: Pixiv,
+        showInHero: false,
+        showInContact: true,
+    },
+
+    {
+        name: "Steam",
+        url: "https://steamcommunity.com/id/SimplyEr1c/",
+        icon: "ti ti-brand-steam",
+        component: null,
         showInHero: false,
         showInContact: true,
     },
@@ -106,6 +147,15 @@ const artworkPictures = [
     {
         src: "https://cdn.cara.app/production/posts/1fe13c44-dc4f-47dd-9176-b42d4117215e/simplyer1c-5BVOamOlQYBklKpSU25oN-S4S.png",
         alt: "Sad Machine",
+    },
+
+    {
+        src: "https://cdn.cara.app/production/posts/e39123aa-387b-4550-b852-8342e6d808e9/simplyer1c-1PXoehyoXeR1LwJALC830-ThePlaceInTheMiddleOfNothing.png",
+        alt: "The place in the middle of nothing",
+    },
+    {
+        src: "https://cdn.cara.app/production/posts/76f5c01a-6f98-4cde-8ac1-f0bda955ab2d/simplyer1c-QQIG_cGq3fwkhqFrH3x_4-cake3.png",
+        alt: "Portal Cake",
     },
 
     {
@@ -190,7 +240,7 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
         id="art"
         class="min-h-dvh py-14 flex flex-col items-center justify-center"
     >
-        <p class="w-8/12 mb-5">
+        <p class="w-8/12 mb-10">
             Hello! I'm Er1c, a self-taught illustrator making art from raster,
             vector graphics and 3D modeling. I learned through online course
             platforms such as Domestika and Udemy and Youtube. I like to create
@@ -198,7 +248,7 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
             Landscapes and graphic design.
         </p>
 
-        <div class="grid md:grid-cols-3 mx-15 gap-5">
+        <div class="grid grid-cols-2 md:grid-cols-3 mx-8 gap-4">
             {
                 artworkPictures.map((pic) => (
                     <div class="break-inside-avoid">
@@ -206,9 +256,9 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
                             src={pic.src}
                             alt={pic.alt}
                             height="300"
-                            width="300"
+                            width="400"
                             loading="lazy"
-                            class="shadow-lg dark:shadow-shadow-none "
+                            class="shadow-lg dark:shadow-shadow-none"
                         />
                     </div>
                 ))
