@@ -213,20 +213,25 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
         </div>
         <!-- Greet dialog with some social media links -->
         <div class="relative box">
-            <h1 class="text-4xl md:text-6xl font-bold uppercase">SimplyEr1c</h1>
-            <p class="md:text-3xl font-medium">
-                A bit of everything's Illustrator.
-            </p>
-            <ul
-                class="flex flex-row mt-3 gap-x-5 text-4xl items-center justify-center md:justify-start"
+            <span>
+                <h1 class="text-4xl md:text-6xl font-bold uppercase">
+                    SimplyEr1c
+                </h1>
+                <p class="md:text-3xl font-medium">
+                    A bit of everything's Illustrator.
+                </p>
+            </span>
+
+            <a
+                href="https://cara.app/simplyer1c"
+                aria-label="Portfolio"
+                class="contactButton bg-coolblue text-xl p-3 w-fit"
             >
-                <a
-                    href="https://cara.app/simplyer1c"
-                    aria-label="Portfolio"
-                    class="contactButton bg-coolblue text-xl p-3"
-                >
-                    Portfolio
-                </a>
+                Portfolio
+            </a>
+            <ul
+                class="flex flex-wrap md:flex-row gap-5 text-4xl items-center justify-center md:justify-start"
+            >
                 {
                     getHeroLinks().map((link) => (
                         <li>

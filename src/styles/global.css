@@ -24,7 +24,7 @@
         @apply bg-coolblue dark:bg-metaldark h-dvh flex flex-col md:flex-row gap-y-18 md:gap-y-0 items-center justify-center md:justify-between md:px-24;
     }
     .box {
-        @apply bg-metaldark dark:drop-shadow-2xl text-snowwhite text-center md:text-left p-6;
+        @apply bg-metaldark flex flex-col dark:drop-shadow-2xl items-center md:items-start text-snowwhite text-center md:text-left p-6 gap-3 ;
     }
 
     .contactButton {
