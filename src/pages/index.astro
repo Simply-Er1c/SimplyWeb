@@ -21,6 +21,15 @@ const socialLinks = [
     },
 
     {
+        name: "Twitter/X",
+        url: "https://x.com/simplyer1c",
+        icon: "ti ti-brand-x",
+        component: null,
+        showInHero: true,
+        showInContact: true,
+    },
+
+    {
         name: "Mastodon",
         url: "https://mas.to/@SimplyEr1c",
         icon: "ti ti-brand-mastodon",
@@ -317,7 +326,7 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
         </div>
     </section>
     <footer class="m-auto w-fit h-fit py-4 justify-center">
-        <p>
+        <p class="text-center">
             Made with <i class="ti ti-brand-tailwind"></i> Tailwind, <i
                 class="ti ti-brand-astro"></i> Astro and <i class="ti ti-coffee"
             ></i>
