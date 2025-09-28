@@ -307,15 +307,13 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
     >
         <p class="text-center font-bold text-7xl mb-8">Find me on</p>
         <!-- List of social media  -->
-        <div
-            class="grid grid-cols-2 md:grid-cols-4 space-y-6 space-x-4 md:w-4/5"
-        >
+        <div class="flex flex-wrap md:w-3/6 items-center justify-center gap-5">
             {
                 getContactLinks().map((link) => (
                     <div class="">
                         <a
                             href={link.url}
-                            class="contactButton block"
+                            class="contactButton"
                             aria-label={link.name}
                             target="_blank"
                             rel="noopener noreferrer"
