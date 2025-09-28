@@ -16,18 +16,11 @@
         @apply bg-snowwhite dark:bg-metaldark text-metaldark dark:text-snowwhite;
     }
 
-    .bgGrid {
-        @apply bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px];
-    }
-
     .hero {
-        @apply bg-coolblue dark:bg-metaldark h-dvh flex flex-col md:flex-row gap-y-18 md:gap-y-0 items-center justify-center md:justify-between md:px-24;
-    }
-    .box {
-        @apply bg-metaldark flex flex-col dark:drop-shadow-2xl items-center md:items-start text-snowwhite text-center md:text-left p-6 gap-3 ;
+        @apply h-dvh flex flex-col md:flex-row gap-y-18 md:gap-y-0 items-center justify-center md:justify-evenly md:px-24;
     }
 
     .contactButton {
-        @apply bg-metaldark dark:bg-coolblue text-snowwhite text-center gap-x-1 p-5 text-2xl md:text-4xl hover:scale-110  transition-all  font-semibold;
+        @apply bg-metaldark dark:bg-coolblue text-snowwhite text-center p-5 text-xl md:text-2xl hover:scale-110 transition-all font-semibold rounded-md;
     }
 }

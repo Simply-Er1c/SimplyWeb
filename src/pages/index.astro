@@ -185,8 +185,8 @@ const artworkPictures = [
     },
 
     {
-        src: "https://cdn.cara.app/production/posts/af94455d-7f60-4c6f-8de3-4d604fcb7316/simplyer1c-l8U2T1AaQREUjaaxvaRyx-SteamDeliveryGirl.png",
-        alt: "Steam Delivery Girl Fanart",
+        src: "https://cdn.cara.app/production/posts/2f54caa6-718a-4a6e-a981-33c133e8a43a/simplyer1c-PHJdCdyq-UADcwMaxxxxG-Render.png",
+        alt: "Portal cake scene",
     },
 
     {
@@ -202,7 +202,7 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
 
 <Layout>
     <!-- Hero -->
-    <section id="Hero" class="relative hero">
+    <section id="Hero" class="relative hero border-metaldark">
         <!-- Background Image -->
         <!-- This Covers the entire  hero section to the background -->
         <!-- The rest of the elements will be put with "relative"  -->
@@ -212,34 +212,33 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
             width={1920}
             format="webp"
             loading="eager"
-            class="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+            class="absolute opacity-40 inset-0 w-full h-full object-cover pointer-events-none select-none"
             draggable="false"
         />
 
-        <div class="relative drop-shadow-2xl drop-shadow-metaldark">
+        <div class="relative fill-metaldark dark:fill-snowwhite">
             <!-- Logo -->
             <Logo width="155" />
         </div>
         <!-- Greet dialog with some social media links -->
-        <div class="relative box">
+        <div
+            class="relative flex flex-col items-center text-center md:items-end md:text-end d p-6 gap-3"
+        >
             <span>
-                <h1 class="text-4xl md:text-6xl font-bold uppercase">
+                <p class="text-4xl md:text-8xl font-bold uppercase">
+                    Hello! I'm
+                </p>
+                <h1 class="text-4xl md:text-8xl font-bold uppercase">
                     SimplyEr1c
                 </h1>
-                <p class="md:text-3xl font-medium">
+                <p class="md:text-xl font-medium">
                     A bit of everything's Illustrator.
                 </p>
             </span>
 
-            <a
-                href="https://cara.app/simplyer1c"
-                aria-label="Portfolio"
-                class="contactButton bg-coolblue text-xl p-3 w-fit"
-            >
-                Portfolio
-            </a>
+            <!-- List of social media buttons (Only some important links included) -->
             <ul
-                class="flex flex-wrap md:flex-row gap-5 text-4xl items-center justify-center md:justify-start"
+                class="w-fit inline-flex gap-5 text-4xl md:text-6xl items-center justify-center md:justify-start"
             >
                 {
                     getHeroLinks().map((link) => (
@@ -260,6 +259,13 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
                     ))
                 }
             </ul>
+            <a
+                href="https://cara.app/simplyer1c"
+                aria-label="Portfolio"
+                class="contactButton bg-coolblue text-xl p-3 w-fit"
+            >
+                Portfolio
+            </a>
         </div>
     </section>
 
@@ -268,7 +274,7 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
         id="art"
         class="min-h-dvh py-14 flex flex-col items-center justify-center"
     >
-        <p class="w-8/12 mb-10">
+        <p class="w-8/12 mb-10 text-xl">
             Hello! I'm Er1c, a self-taught illustrator making art from raster,
             vector graphics and 3D modeling. I learned through online course
             platforms such as Domestika and Udemy and Youtube. I like to create
@@ -276,10 +282,10 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
             Landscapes and graphic design.
         </p>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 mx-8 gap-4">
+        <div class="columns-2 md:columns-3 gap-4 mx-8 w-4/5">
             {
                 artworkPictures.map((pic) => (
-                    <div class="break-inside-avoid">
+                    <div class="mb-4 break-inside-avoid">
                         <Image
                             src={pic.src}
                             alt={pic.alt}
@@ -297,35 +303,36 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
     <!-- Links  -->
     <section
         id="links"
-        class="min-h-dvh bg-coolblue dark:bg-metaldark p-8 flex flex-col items-center justify-center"
+        class="min-h-dvh p-8 flex flex-col items-center justify-center"
     >
-        <p class="text-center text-snowwhite font-bold text-7xl mb-8">
-            Find me on
-        </p>
+        <p class="text-center font-bold text-7xl mb-8">Find me on</p>
+        <!-- List of social media  -->
         <div
-            class="flex flex-wrap w-1xl md:w-4xl gap-6 m-3 items-center justify-center"
+            class="grid grid-cols-2 md:grid-cols-4 space-y-6 space-x-4 md:w-4/5"
         >
             {
                 getContactLinks().map((link) => (
-                    <a
-                        href={link.url}
-                        class="contactButton"
-                        aria-label={link.name}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {link.component ? (
-                            <link.component />
-                        ) : link.icon ? (
-                            <i class={link.icon} />
-                        ) : null}
-                        {link.name}
-                    </a>
+                    <div class="">
+                        <a
+                            href={link.url}
+                            class="contactButton block"
+                            aria-label={link.name}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {link.component ? (
+                                <link.component />
+                            ) : link.icon ? (
+                                <i class={link.icon} />
+                            ) : null}
+                            {link.name}
+                        </a>
+                    </div>
                 ))
             }
         </div>
     </section>
-    <footer class="m-auto w-fit h-fit py-4 justify-center">
+    <footer class="m-auto h-fit py-5">
         <p class="text-center">
             Made with <i class="ti ti-brand-tailwind"></i> Tailwind, <i
                 class="ti ti-brand-astro"></i> Astro and <i class="ti ti-coffee"
