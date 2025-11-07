@@ -12,8 +12,16 @@ import Vgen from "../assets/icons/Vgen.astro";
 // Links of my social media accounts.
 const socialLinks = [
     {
+        name: "Ko-fi",
+        url: "https://ko-fi.com/simplyer1c",
+        icon: "ti ti-coffee",
+        component: null,
+        showInHero: true,
+        showInContact: true,
+    },
+    {
         name: "Bluesky",
-        url: "https://bsky.app/profile/simplyer1c.art",
+        url: "https://bsky.app/profile/simplyer1c.bsky.social",
         icon: "ti ti-brand-bluesky",
         component: null,
         showInHero: true,
@@ -61,7 +69,7 @@ const socialLinks = [
         url: "https://www.instagram.com/simplyer1c/",
         icon: "ti ti-brand-instagram",
         component: null,
-        showInHero: true,
+        showInHero: false,
         showInContact: true,
     },
 
@@ -88,7 +96,7 @@ const socialLinks = [
         url: "https://kick.com/simplyer1c",
         icon: "ti ti-brand-kick",
         component: null,
-        showInHero: true,
+        showInHero: false,
         showInContact: true,
     },
 
@@ -192,6 +200,10 @@ const artworkPictures = [
     {
         src: "https://cdn.cara.app/production/posts/63359974-b929-4b64-bfc2-a933b18be6b9/simplyer1c-ICbnsko2solzM08WFk_-K-Main2.jpg",
         alt: "3D character course project",
+    },
+    {
+        src: "https://cdn.cara.app/production/posts/7b674d71-26dc-4cac-bec1-89f8249b080e/simplyer1c-qS7ywgqqaIt5Oxhe9Kj3k-Day_Page-6.png",
+        alt: "Princess Rosalina Sculpt",
     },
 ];
 
@@ -307,7 +319,7 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
     >
         <p class="text-center font-bold text-7xl mb-8">Find me on</p>
         <!-- List of social media  -->
-        <div class="flex flex-wrap md:w-3/6 items-center justify-center gap-5">
+        <div class="flex flex-wrap md:w-5/6 items-center justify-center gap-5">
             {
                 getContactLinks().map((link) => (
                     <div class="">
