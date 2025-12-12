@@ -21,6 +21,6 @@
     }
 
     .contactButton {
-        @apply block bg-metaldark dark:bg-coolblue text-snowwhite text-center p-5 text-xl md:text-3xl hover:scale-110 transition-all font-semibold rounded-md;
+        @apply block bg-metaldark dark:bg-coolblue text-snowwhite text-center p-5 text-xl md:text-3xl hover:scale-110 transition-all font-semibold rounded-xl;
     }
 }

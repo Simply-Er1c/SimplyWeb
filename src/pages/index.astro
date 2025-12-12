@@ -24,22 +24,13 @@ const socialLinks = [
         url: "https://bsky.app/profile/simplyer1c.bsky.social",
         icon: "ti ti-brand-bluesky",
         component: null,
-        showInHero: true,
-        showInContact: true,
+        showInHero: false,
+        showInContact: false,
     },
     {
         name: "Ko-fi",
         url: "https://ko-fi.com/simplyer1c",
         icon: "ti ti-coffee",
-        component: null,
-        showInHero: true,
-        showInContact: true,
-    },
-
-    {
-        name: "Mastodon",
-        url: "https://mas.to/@SimplyEr1c",
-        icon: "ti ti-brand-mastodon",
         component: null,
         showInHero: true,
         showInContact: true,
@@ -100,15 +91,6 @@ const socialLinks = [
     },
 
     {
-        name: "Lemmy",
-        url: "https://lemmy.world/u/SimplyEr1c",
-        icon: "ti ti-world",
-        component: null,
-        showInHero: false,
-        showInContact: true,
-    },
-
-    {
         name: "Pixiv",
         url: "https://www.pixiv.net/en/users/100654117",
         icon: null,
@@ -148,6 +130,10 @@ const socialLinks = [
 // Pictures
 // This artworks are hosted on Cara. I want only a few selection. There's no need to auto-scrape and put all here.
 const artworkPictures = [
+    {
+        src: "https://cdn.cara.app/production/posts/4a9de0ae-4f45-43cb-887b-90994048681d/simplyer1c-K9oRy7LgWuRwtfwNTGJie-Birch-Forest.png",
+        alt: "Birch Forest Painting",
+    },
     {
         src: "https://cdn.cara.app/production/posts/fa03dd4b-0e9e-4b4e-93cf-8e4340dc36cd/simplyer1c-SOSL-_oNhHbd35LUkBwjy-DonutFinal.png",
         alt: "Donut",
@@ -265,7 +251,7 @@ const getContactLinks = () => socialLinks.filter((link) => link.showInContact);
     <!-- Art Gallery and brief description  -->
     <section
         id="art"
-        class="min-h-dvh py-14 flex flex-col items-center justify-center"
+        class="grid-bg min-h-dvh py-14 flex flex-col items-center justify-center"
     >
         <p class="w-8/12 mb-10 text-xl">
             Hello! I'm Er1c, a self-taught illustrator making art from raster,
